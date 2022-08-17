@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './global';
 import { theme } from './theme';
 import BgrLogo from './assets/images/burger.png';
-
+import { Burger, Menu } from './components';
 
 const burgerIcon= {
   height: "min(20vmin)",
@@ -21,6 +21,7 @@ function App() {
        <ThemeProvider theme={theme}> 
          <> 
         <GlobalStyles />
+        <Burger />
         <div>
           <img src={BgrLogo} style={burgerIcon} alt="Burger Logo" />
           <h1>Hello. This is burger menu tutorial</h1>
