@@ -17,7 +17,7 @@ export const StyledBurger = styled.button`
     &:focus {
     outline: none;
     }
-  
+     
     div {
         width: max(6vmin);
         height: 0.25rem;
