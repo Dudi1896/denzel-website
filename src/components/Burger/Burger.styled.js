@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const StyledBurger = styled.button`
     position absolute;
     top: 5%;
-    left: 2rem;
+    left: 3.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: max(6vmin);
+    height: min(4.5vmin);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -19,7 +19,7 @@ export const StyledBurger = styled.button`
     }
      
     div {
-        width: max(6vmin);
+        width: min(4.5vmin);
         height: 0.25rem;
         background: ${({ theme, open }) => open ? theme.DarkPrimary : theme.PrimaryColor};
         border-radius: 10px;

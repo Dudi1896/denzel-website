@@ -1,41 +1,86 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledMenu = styled.nav`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: ${({ theme }) => theme.primaryLight};
-    height: 100vh;
+    justify-content: flex-start;
+    background: ${({ theme }) => theme.MidPrimary};
+    height: min(60vmin);
     text-align: left;
-    padding: 2rem;
+    padding: 4rem 2rem;
     position: absolute;
-    top: 0;
+    width: min(40vmin);
+    top: 45px;
     left: 0;
     transition: transform 0.3s ease-in-out;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+    transform: ${({ open }) =>
+      open ? "translateX(12%)" : "translateX(-100%)"};
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
         width: 100%;
         z-index: 3;
+        height: 100vh;
+        transform: ${({ open }) =>
+          open ? "translateX(0%)" : "translateX(-100%)"};
+        top: 0px;
+        padding: 8rem 0rem;
 }
 
-a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: ${({ theme }) => theme.primaryDark}; 
+nav {
+    display: block;
+    text-align: center;
+    position: absolute;
+    height: 210px;
+    top: 50%;
+    margin-top: -120px;
+    width: 100%;
+}
+
+
+
+.menu-items {
+    font-size: min(2.25vmin);
+    padding: min(1.5vmin);
+    text-align: left;
+    color: ${({ theme }) => theme.LightPrimary}; 
     text-decoration: none;
     transition: color 0.3s linear;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        font-size: 1.5rem;
-        text-align: center;
+        font-size: 1.25rem;
+        text-align: left;
+        padding: 1rem 4rem;
 }
 
 &:hover {
     color: ${({ theme }) => theme.primaryHover};
   }
 }
+
+.box-social{
+    padding: 2rem 0rem;
+    display: flex; 
+    justify-content: left;
+
+    .social {
+        padding: min(1.5vmin);
+        text-align: center;
+        
+    a{
+        color: ${({ theme }) => theme.LightPrimary};
+        padding: 1.5rem 2.5rem 1.5rem 0;
+        font-size: min(3vmin);
+
+        &:hover {
+            color: ${({ theme }) => theme.primaryHover};
+        }
+    }
+
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+        font-size: 1.25rem;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+}
+
 `;
