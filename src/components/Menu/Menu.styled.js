@@ -26,18 +26,6 @@ export const StyledMenu = styled.nav`
         padding: 8rem 0rem;
 }
 
-nav {
-    display: block;
-    text-align: center;
-    position: absolute;
-    height: 210px;
-    top: 50%;
-    margin-top: -120px;
-    width: 100%;
-}
-
-
-
 .menu-items {
     font-size: min(2.25vmin);
     padding: min(1.5vmin);
@@ -49,8 +37,8 @@ nav {
     @media (max-width: ${({ theme }) => theme.mobile}) {
         font-size: 1.25rem;
         text-align: left;
-        padding: 1rem 4rem;
-}
+        padding: 1.5rem 3.45rem;
+    }
 
 &:hover {
     color: ${({ theme }) => theme.primaryHover};
@@ -58,29 +46,46 @@ nav {
 }
 
 .box-social{
-    padding: 2rem 0rem;
     display: flex; 
     justify-content: left;
+    font-size: 4.5rem;
 
     .social {
         padding: min(1.5vmin);
         text-align: center;
+        font-size: 4.5rem;
         
     a{
         color: ${({ theme }) => theme.LightPrimary};
-        padding: 1.5rem 2.5rem 1.5rem 0;
+        padding: 1.5rem 1.5rem 1.5rem 0;
         font-size: min(3vmin);
 
         &:hover {
             color: ${({ theme }) => theme.primaryHover};
         }
+    
+        @media (max-width: ${({ theme }) => theme.mobile}) {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    
     }
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        font-size: 1.25rem;
         text-align: center;
-        padding: 1rem 2rem;
+        padding: 2.5rem 3.5rem;
     }
 }
 
+
+
+// .hello {
+
+//     @media (max-width: ${({ theme }) => theme.mobile}) {
+//         font-size: 1.25rem;
+//         text-align: left;
+//         paddingRight:  3.45rem;
+//     }
+  
+//   };
 `;
