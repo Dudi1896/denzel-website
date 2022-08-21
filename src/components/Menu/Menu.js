@@ -3,26 +3,21 @@ import { Link, NavLink } from "react-router-dom";
 import { StyledMenu } from "./Menu.styled";
 import { bool } from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faEnvelope,faBlog,faFolderOpen,faPaperclip,} from "@fortawesome/free-solid-svg-icons";
-import {faLinkedin,faGithub,faTwitter,} from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faBlog,
+  faFolderOpen,
+  faPaperclip,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const menuLink = {
   textDecoration: "none",
 };
-
-const helLink = {
-  textTransform: "uppercase",
-  letterSpacing: "0.5rem",
-  color: "#164E63",
-  fontSize: "min(2.25vmin)",
-  fontWeight: "Bold",
-  padding: "min(1.5vmin)",
-
-  '@media(max-width: 788px': {
-    paddingRight: '15px',
-  }
-};
-
 
 const Menu = ({ open, ...props }) => {
   const isHidden = open ? true : false;
@@ -57,18 +52,13 @@ const Menu = ({ open, ...props }) => {
         </div>
       </NavLink>
 
-      <br />
-        <div className="hello" style={helLink} >
-          <span role="img" aria-label="Say Hello" aria-hidden="true">
-            Say Hello
-          </span>
-      </div>
-
       <div className="menu-items" tabIndex={tabIndex}>
         <span role="img" aria-label="info@dudemba.dev" aria-hidden="true">
-          <FontAwesomeIcon icon={faEnvelope} />
+          <a target="_blank" rel="noreferrer" href="mailto:info@dudemba.dev">
+            <FontAwesomeIcon icon={faEnvelope} />
+            &emsp;info@dudemba.dev
+          </a>
         </span>
-        &emsp;info@dudemba.dev
       </div>
       <div className="box-social">
         <div className="social" tabIndex={tabIndex}>

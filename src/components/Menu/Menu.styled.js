@@ -5,9 +5,9 @@ export const StyledMenu = styled.nav`
     flex-direction: column;
     justify-content: flex-start;
     background: ${({ theme }) => theme.MidPrimary};
-    height: min(60vmin);
+    height: min(50vmin);
     text-align: left;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     position: absolute;
     width: min(40vmin);
     top: 45px;
@@ -23,7 +23,7 @@ export const StyledMenu = styled.nav`
         transform: ${({ open }) =>
           open ? "translateX(0%)" : "translateX(-100%)"};
         top: 0px;
-        padding: 8rem 0rem;
+        padding: 10rem 0rem;
 }
 
 .menu-items {
@@ -33,6 +33,11 @@ export const StyledMenu = styled.nav`
     color: ${({ theme }) => theme.LightPrimary}; 
     text-decoration: none;
     transition: color 0.3s linear;
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
         font-size: 1.25rem;
@@ -47,45 +52,28 @@ export const StyledMenu = styled.nav`
 
 .box-social{
     display: flex; 
-    justify-content: left;
-    font-size: 4.5rem;
+    justify-content: center;
+    font-size: min(2.75vmin);
+    margin-top: min(5vmin);
 
     .social {
-        padding: min(1.5vmin);
-        text-align: center;
-        font-size: 4.5rem;
-        
-    a{
-        color: ${({ theme }) => theme.LightPrimary};
-        padding: 1.5rem 1.5rem 1.5rem 0;
-        font-size: min(3vmin);
-
-        &:hover {
-            color: ${({ theme }) => theme.primaryHover};
-        }
-    
         @media (max-width: ${({ theme }) => theme.mobile}) {
-            text-align: center;
-            font-size: 1.5rem;
+            padding: 0rem 3.6rem;
         }
-    
-    }
 
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-        text-align: center;
-        padding: 2.5rem 3.5rem;
+        a{
+            color: ${({ theme }) => theme.LightPrimary};
+            padding: min(3.5vmin);
+
+            &:hover {
+                color: ${({ theme }) => theme.primaryHover};
+            }
+        
+            @media (max-width: ${({ theme }) => theme.mobile}) {
+                font-size: 1.5rem;
+            }
+        }
+
     }
 }
-
-
-
-// .hello {
-
-//     @media (max-width: ${({ theme }) => theme.mobile}) {
-//         font-size: 1.25rem;
-//         text-align: left;
-//         paddingRight:  3.45rem;
-//     }
-  
-//   };
 `;
