@@ -11,10 +11,10 @@ export const StyledMenu = styled.nav`
     position: absolute;
     width: min(40vmin);
     top: 45px;
-    left: 0;
+    right: 0;
     transition: transform 0.3s ease-in-out;
     transform: ${({ open }) =>
-      open ? "translateX(12%)" : "translateX(-100%)"};
+      open ? "translateX(-12%)" : "translateX(100%)"};
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
         width: 100%;
