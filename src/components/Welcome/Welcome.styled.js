@@ -29,6 +29,7 @@ export const StyledWelcome = styled.div`
         font-size: 2em;
         margin: 1em;
         padding: 0.25em 1em;
+        border: 3px solid ${({ theme }) => theme.PrimaryColor};
         border-radius: 35px;
     }
 }
