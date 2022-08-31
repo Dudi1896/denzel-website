@@ -21,7 +21,7 @@ export const StyledMenu = styled.nav`
         z-index: 3;
         height: 100vh;
         transform: ${({ open }) =>
-          open ? "translateX(0%)" : "translateX(-100%)"};
+          open ? "translateX(0%)" : "translateX(100%)"};
         top: 0px;
         padding: 10rem 0rem;
 }
