@@ -1,32 +1,35 @@
 import styled from "styled-components";
+import bg from "../../assets/images/bg.svg"
 
 export const StyledWelcome = styled.div`
+    background-image: url(${bg}); 
     background-color: #1f1f1f;
     background-attachment: fixed;
     background-size: cover;
-    height: 45vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;   
+    text-align: center;  
+    width: min(200vmin);
+    } 
 
     img{
         width: 9rem;
         height: 9rem;
         margin-right: 0.5rem;
         animation: rotate 0.7s ease-in-out 0.5s;
-        border: 2px solid red;
+        border: 2px solid ${({ theme }) => theme.PrimaryColor};
         border-radius: 100%;
     }
 
     button {
-        background: ${(props) => (props.primary ? "palevioletred" : "white")};
-        color: ${(props) => (props.primary ? "white" : "palevioletred")};
-        font-size: 1em;
+        background: ${({ theme }) => theme.LightPrimary};
+        color: ${({ theme }) => theme.PrimaryColor};
+        font-size: 2em;
         margin: 1em;
         padding: 0.25em 1em;
-        border: 2px solid palevioletred;
-        border-radius: 3px;
+        border-radius: 35px;
     }
 }
 `;

@@ -1,8 +1,8 @@
 import React from "react";
 
-import Logo from "../../assets/images/heart.jpg";
-import { StyledWelcome  } from "./Welcome.styled.js";
-// import About from "./About";
+import Logo from "../../assets/images/logo.svg";
+import { StyledWelcome } from "./Welcome.styled.js";
+import About from "../About/About.js";
 
 const Welcome = ({ element }) => {
   return (
@@ -11,10 +11,11 @@ const Welcome = ({ element }) => {
         <div ref={element}>
           <img src={Logo} alt="logo" className="welcome--logo" />
           <p>Even if you scroll, I will stick with you</p>
-          <button className="welcome__cta-primary">Contact us</button>
+          <button>Contact us</button>
         </div>
       </StyledWelcome>
-      {/* <About /> */}
+      <About />
+      <About />
     </main>
   );
 };
