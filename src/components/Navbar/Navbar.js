@@ -18,9 +18,7 @@ const Navbar = () => (
     <ul className="navbar--link">
       <Burger />
       <Menu />
-      <li className="navbar--link-item">Home</li>
       <li className="navbar--link-item">About</li>
-      <li className="navbar--link-item">Blog</li>
     </ul>
   </nav>
 
