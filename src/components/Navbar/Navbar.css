@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    z-index: 1;
+    width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+  } 
+  
+
+
+  .navbar--logo-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid greenyellow;
+  }
+  
+  .navbar--logo {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    animation: rotate 0.7s ease-in-out 0.5s;
+    border: 2px solid red;
+  }
+  
+  .navbar--link {
+    display: flex;
+    list-style: none;
+    border: 2px solid purple;
+  }
+ 
+  .navbar--link-item {
+    margin: 0.4rem 1rem 0 0;
+    padding: 0 0.3rem;
+    cursor: pointer;
+    border: 2px solid orange;
+  }

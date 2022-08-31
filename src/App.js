@@ -4,7 +4,7 @@ import { useOnClickOutside } from "./hooks";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
 import BgrLogo from "./assets/images/burger.png";
-import { Burger, Menu } from "./components";
+import { Burger, Menu, Navbar } from "./components";
 import FocusLock from "react-focus-lock";
 import { Routes, Route } from "react-router-dom";
 
@@ -18,6 +18,7 @@ const burgerIcon = {
 };
 
 function App() {
+  
   const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
@@ -31,6 +32,7 @@ function App() {
             <GlobalStyles />
             <div ref={node}>
               <FocusLock disabled={!open}>
+                <Navbar/>
                 <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
                 <Menu open={open} setOpen={setOpen} id={menuId} />
               </FocusLock>
