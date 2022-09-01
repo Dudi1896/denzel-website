@@ -27,16 +27,16 @@ function App() {
     <div>
       <ThemeProvider theme={theme}>
         <>
-          <GlobalStyles />
+          <GlobalStyles/>
           <div ref={node}>
             <FocusLock disabled={!open}>
-              {/* <Navbar/> */}
+              <Navbar/>
               <Welcome />
-              <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-              <Menu open={open} setOpen={setOpen} id={menuId} />
+              {/* <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+              <Menu open={open} setOpen={setOpen} id={menuId} /> */}
             </FocusLock>
           </div>
-          <img src={BgrLogo} style={burgerIcon} alt="Burger Logo" />
+          {/* <img src={BgrLogo} style={burgerIcon} alt="Burger Logo" /> */}
         </>
       </ThemeProvider>
     </div>

@@ -11,7 +11,7 @@ export const StyledWelcome = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;  
-    width: min(200vmin);
+    width: 99vw;
     } 
 
     img{
