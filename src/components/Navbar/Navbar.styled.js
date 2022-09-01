@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import bg from "../../assets/images/bg.svg"
-
+import bg from "../../assets/images/bg.svg";
 
 export const StyledNavbar = styled.nav`
     display: flex;
@@ -17,10 +16,24 @@ export const StyledNavbar = styled.nav`
     margin-left: auto;
     margin-right: auto;
 
+    position: ${props => props.sticky ? "none" : "fixed"};
+    animation: ${props => props.sticky ? "none" :"moveDown 0.5s ease-in-out"};
+
+    
+    @keyframes moveDown {
+      from {
+        transform: translateY(-5rem);
+      }
+      to {
+        transform: translateY(0rem);
+      }
+    }
+
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        width: 96vmin;
+        width: 97vmin;
     }
     
+  
     
     img{
       width: 4rem;
@@ -30,7 +43,7 @@ export const StyledNavbar = styled.nav`
     }
 
     h1{
-      margin-right: 2rem;
+      margin-right: 8rem;
     }
  
 }`;

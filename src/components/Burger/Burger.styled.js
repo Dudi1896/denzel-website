@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledBurger = styled.button`
     position absolute;
-    top: 5%;
+    top: 2.7%;
     right: 3.5rem;
     display: flex;
     flex-direction: column;
@@ -14,6 +14,11 @@ export const StyledBurger = styled.button`
     padding: 0;
     z-index: 10;
     
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+        top: 3.5%;
+        right: 2rem;
+    }
+
     &:focus {
     outline: none;
     }

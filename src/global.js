@@ -21,7 +21,6 @@ export const GlobalStyles = createGlobalStyle`
         color: ${({ theme }) => theme.PrimaryColor};
         border: 2px solid black;
         height: 100%;
-        // width: 100%;
         overflow-x: hidden;
         text-rendering: optimizeLegibility;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
