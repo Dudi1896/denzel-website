@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bg from "../../assets/images/bg.svg";
 
 export const StyledNavbar = styled.nav.attrs(props => ({className: props.className,}))`
   display: flex;
