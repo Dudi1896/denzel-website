@@ -19,10 +19,17 @@ export const StyledNavbar = styled.nav.attrs(props => ({className: props.classNa
 
 
 .navbar--logo {
-  width: min(5.0vmin);
-  height: min(5.0vmin);
+  width:  max(4.0vmin);
+  height:  max(4.0vmin);
   margin: 0.5rem;
   animation: rotate 0.7s ease-in-out 0.5s;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: max(7.0vmin);
+    width: max(7.0vmin);
+}
+
+
 }
 
 @keyframes moveDown {
