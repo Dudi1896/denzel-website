@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMenu = styled.nav`
+export const StyledMenu = styled.nav.attrs(props => ({className: props.className,}))`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -13,6 +13,7 @@ export const StyledMenu = styled.nav`
     top: 45px;
     right: 0;
     transition: transform 0.3s ease-in-out;
+    position: fixed;
     transform: ${({ open }) =>
       open ? "translateX(-12%)" : "translateX(100%)"};
 
@@ -24,6 +25,7 @@ export const StyledMenu = styled.nav`
           open ? "translateX(0%)" : "translateX(100%)"};
         top: 0px;
         padding: 10rem 0rem;
+        position: fixed;
 }
 
 .menu-items {
