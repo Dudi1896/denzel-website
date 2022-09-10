@@ -10,7 +10,7 @@ export const StyledMenu = styled.nav.attrs(props => ({className: props.className
     padding: 5rem 2rem;
     position: absolute;
     width: min(40vmin);
-    top: 45px;
+    top: 0;
     right: 0;
     transition: transform 0.3s ease-in-out;
     position: fixed;

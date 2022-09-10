@@ -14,6 +14,7 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
     cursor: pointer;
     z-index: 10;
     position:fixed;
+    color: ${({ theme }) => theme.DarkPrimary};
     
     @media (max-width: ${({ theme }) => theme.mobile}) {
         top: 2.5%;

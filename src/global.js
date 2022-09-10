@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
     html, body {
-        margin: 2px;
+        margin: 0px;
         padding: 0px;
 
         @media (max-width: ${({ theme }) => theme.mobile}) {

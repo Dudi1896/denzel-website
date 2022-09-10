@@ -16,6 +16,8 @@ const Welcome = ({ element }) => {
       </StyledWelcome>
       <About />
       <About />
+      <About />
+      <About />
     </main>
   );
 };

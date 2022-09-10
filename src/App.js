@@ -24,8 +24,8 @@ function App() {
             <FocusLock disabled={!open}>
               <Navbar sticky={isSticky} />
               <Welcome element={element} />
-              <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-              <Menu open={open} setOpen={setOpen} id={menuId} />
+              <Burger sticky={isSticky} open={open} setOpen={setOpen} aria-controls={menuId} />
+              <Menu sticky={isSticky} open={open} setOpen={setOpen} id={menuId} />
             </FocusLock>
           </div>
         </>
