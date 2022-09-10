@@ -9,11 +9,6 @@ const Navbar = (sticky) => {
       {sticky ? <img src={Logo} alt="logo" className="navbar--logo" /> : null}
     </div>
   </StyledNavbar>
-      
-      //  <StyledNavbar sticky> 
-      //   <img src={Logo} alt="logo" />
-      //   <h1> Stick'Me</h1>
-      //   </StyledNavbar> 
   );
 };
 

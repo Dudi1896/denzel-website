@@ -9,11 +9,9 @@ export const StyledNavbar = styled.nav.attrs(props => ({className: props.classNa
   z-index: 1;
   width: 100%;
 
-  background: #333;
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 1px 1px 1px #222;
   animation: moveDown 0.5s ease-in-out;
 
 
@@ -22,6 +20,8 @@ export const StyledNavbar = styled.nav.attrs(props => ({className: props.classNa
   height:  max(4.0vmin);
   margin: 0.5rem;
   animation: rotate 0.7s ease-in-out 0.5s;
+  z-index: 3;
+  
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: max(7.0vmin);
