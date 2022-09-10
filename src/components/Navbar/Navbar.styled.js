@@ -22,13 +22,10 @@ export const StyledNavbar = styled.nav.attrs(props => ({className: props.classNa
   animation: rotate 0.7s ease-in-out 0.5s;
   z-index: 3;
   
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    height: max(7.0vmin);
-    width: max(7.0vmin);
-}
-
-
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      height: max(7.0vmin);
+      width: max(7.0vmin);
+    }
 }
 
 @keyframes moveDown {
