@@ -3,6 +3,7 @@ import React from "react";
 import Logo from "../../assets/images/logo.svg";
 import { StyledWelcome } from "./Welcome.styled.js";
 import About from "../About/About.js";
+import LazyShow from "../../Hooks/LazyShow";
 
 const Welcome = ({ element }) => {
   return (
@@ -14,10 +15,18 @@ const Welcome = ({ element }) => {
           <button>Contact us</button>
         </div>
       </StyledWelcome>
-      <About />
-      <About />
-      <About />
-      <About />
+      <LazyShow>
+        <About />
+      </LazyShow>
+      <LazyShow>
+        <About />
+      </LazyShow>
+      <LazyShow>
+        <About />
+      </LazyShow>
+      <LazyShow>
+        <About />
+      </LazyShow>
     </main>
   );
 };
