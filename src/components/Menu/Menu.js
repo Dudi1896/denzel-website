@@ -31,7 +31,7 @@ const Menu = ({ sticky, open, ...props }) => {
         aria-hidden={!isHidden}
         {...props}
       >
-        <NavLink style={menuLink} to="/">
+        <NavLink style={menuLink} to="/home">
           <div className="menu-items" tabIndex={tabIndex}>
             <span role="img" aria-label="Pricing" aria-hidden="true">
               <FontAwesomeIcon icon={faHome} />
