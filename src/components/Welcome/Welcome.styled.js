@@ -3,7 +3,7 @@ import bg from "../../assets/images/bg.svg"
 
 export const StyledWelcome = styled.div`
     background-image: url(${bg}); 
-    background-color: #1f1f1f;
+    background-color: cream;
     background-attachment: fixed;
     background-size: cover;
     height: 85vh;
