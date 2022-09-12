@@ -5,7 +5,7 @@ import { GlobalStyles } from "./global";
 import { theme } from "./theme";
 import { Burger, Menu, Navbar, Welcome } from "./components";
 import FocusLock from "react-focus-lock";
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import useSticky from "./Hooks/useSticky.js";
 
 function App() {

@@ -42,9 +42,9 @@ export const StyledMenu = styled.nav.attrs(props => ({className: props.className
     }
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        font-size: 1.25rem;
+        font-size: 1.85rem;
         text-align: left;
-        padding: 1.5rem 3.45rem;
+        padding: 2.0rem 3.45rem;
     }
 
 &:hover {
@@ -60,19 +60,19 @@ export const StyledMenu = styled.nav.attrs(props => ({className: props.className
 
     .social {
         @media (max-width: ${({ theme }) => theme.mobile}) {
-            padding: 0rem 3.6rem;
+            padding: 4rem 1.7rem;
         }
 
         a{
             color: ${({ theme }) => theme.LightPrimary};
-            padding: min(3.5vmin);
+            padding: min(3.3vmin);
 
             &:hover {
                 color: ${({ theme }) => theme.primaryHover};
             }
         
             @media (max-width: ${({ theme }) => theme.mobile}) {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
         }
 
