@@ -8,19 +8,26 @@ export const StyledWelcome = styled.div`
     background-size: cover;
     height: 85vh;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     text-align: center;  
     width: 99vw;
-    } 
+
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+        justify-content: center;
+    }
 
     img{
-        width: 9rem;
-        height: 9rem;
-        margin-right: 0.5rem;
+        width: 20rem;
+        margin-right: 15.5rem;
         animation: rotate 0.7s ease-in-out 0.5s;
-        border: 2px solid ${({ theme }) => theme.PrimaryColor};
-        border-radius: 100%;
+        background-color: cream;
+        border-radius: 10%;
+        
+        @media (max-width: ${({ theme }) => theme.mobile}) {
+            margin: 0;
+            justify-content: center;
+        }
     }
 
     button {
