@@ -1,5 +1,4 @@
 import { motion, useAnimation } from "framer-motion";
-// import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
 import React, { useEffect, useRef, useState } from "react";
 
 function useOnScreen(ref, rootMargin = "0px") {

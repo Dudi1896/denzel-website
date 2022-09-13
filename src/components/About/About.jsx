@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledAbout } from "./About.styled";
+import { StyledAbout } from "./About.styled.jsx";
 
 const About = () => (
     <StyledAbout>

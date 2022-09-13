@@ -23,7 +23,7 @@ function useSticky() {
       const callNow = immediate && !timeOut;
       clearTimeout(timeOut);
       timeOut = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
+      // if (callNow) func.apply(context, args);
     };
   };
 

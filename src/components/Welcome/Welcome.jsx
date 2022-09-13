@@ -1,8 +1,8 @@
 import React from "react";
 
 import Logo from "../../assets/images/logo.svg";
-import { StyledWelcome } from "./Welcome.styled.js";
-import About from "../About/About.js";
+import { StyledWelcome } from "./Welcome.styled.jsx";
+import About from "../About/About.jsx";
 import LazyShow from "../../Hooks/LazyShow";
 
 const Welcome = ({ element }) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../assets/images/heart.jpg";
-import { StyledNavbar } from "./Navbar.styled.js";
+import { StyledNavbar } from "./Navbar.styled.jsx";
 
 const Navbar = (sticky) => {
   return (
