@@ -10,12 +10,12 @@ export const StyledMenu = styled.nav.attrs(props => ({className: props.className
     padding: 5rem 2rem;
     position: absolute;
     width: min(40vmin);
-    top: 0;
+    top: 4.6%;
     right: 0;
     transition: transform 0.3s ease-in-out;
     position: fixed;
     transform: ${({ open }) =>
-      open ? "translateX(-12%)" : "translateX(100%)"};
+      open ? "translateX(-25%)" : "translateX(100%)"};
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
         width: 100%;

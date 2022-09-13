@@ -12,13 +12,13 @@ export const StyledNavbar = styled.nav.attrs((props) => ({
   width: 100%;
 
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 2.0%;
+  left: 6rem;
   animation: moveDown 0.5s ease-in-out;
 
   .navbar--logo {
-    width: max(4vmin);
-    height: max(4vmin);
+    width: max(7vmin);
+    height: max(7vmin);
     margin: 0.5rem;
     animation: rotate 0.7s ease-in-out 0.5s;
     z-index: 9;
@@ -26,6 +26,8 @@ export const StyledNavbar = styled.nav.attrs((props) => ({
     @media (max-width: ${({ theme }) => theme.mobile}) {
       height: max(7vmin);
       width: max(7vmin);
+      top: 2%;
+      left: 0rem;
       z-index: 9;
     }
   }
