@@ -8,19 +8,17 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
     flex-direction: column;
     justify-content: space-around;
     height: max(5.0vmin);
-    
-
     background: transparent;
     border: none;
     cursor: pointer;
     z-index: 10;
     position:fixed;
-    color: ${({ theme }) => theme.DarkPrimary};
     
     @media (max-width: ${({ theme }) => theme.mobile}) {
         top: 5%;
         right: 2.5rem;
         height: max(7.0vmin);
+        
     }
 
     &:focus {
@@ -30,7 +28,7 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
     div {
         width: max(5.0vmin);
         height: 0.25rem;
-        background: ${({ theme, open }) => open ? theme.DarkPrimary : theme.PrimaryColor};
+        background: ${({ theme, open }) => open ? theme.LightPrimary : theme.DarkPrimary};
         border-radius: 10px;
         transition: all 0.3s linear;
         position: relative;

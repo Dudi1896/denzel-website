@@ -19,7 +19,6 @@ export const GlobalStyles = createGlobalStyle`
         align-items: center;
         background: ${({ theme }) => theme.LightPrimary};
         color: ${({ theme }) => theme.PrimaryColor};
-        // border: 2px solid black;
         height: 100%;
         overflow-x: hidden;
         text-rendering: optimizeLegibility;
