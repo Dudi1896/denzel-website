@@ -8,9 +8,6 @@ function App() {
   return (
     <div>
       <Header/>     
-      <About/>
-      <About/>
-      <About/>
       <Home/>
     </div>
   );

@@ -2,11 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
     html, body {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
 
         @media (max-width: ${({ theme }) => theme.mobile}) {
-            margin: 2px;
+            margin: 0;
         }
     }
     *, *::after, *::before {
@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
         align-items: center;
         background: ${({ theme }) => theme.LightPrimary};
         color: ${({ theme }) => theme.PrimaryColor};
-        border: 2px solid black;
+        // border: 2px solid black;
         height: 100%;
         overflow-x: hidden;
         text-rendering: optimizeLegibility;

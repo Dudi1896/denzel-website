@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const StyledBurger = styled.button.attrs(props => ({className: props.className,}))`
     position absolute;
-    top: 6%;
+    top: 5%;
     right: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: max(4.0vmin);
+    height: max(5.0vmin);
+    
 
     background: transparent;
     border: none;
@@ -17,7 +18,7 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
     color: ${({ theme }) => theme.DarkPrimary};
     
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        top: 2.5%;
+        top: 5%;
         right: 2.5rem;
         height: max(7.0vmin);
     }
@@ -27,7 +28,7 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
     }
      
     div {
-        width: max(4.0vmin);
+        width: max(5.0vmin);
         height: 0.25rem;
         background: ${({ theme, open }) => open ? theme.DarkPrimary : theme.PrimaryColor};
         border-radius: 10px;
