@@ -17,14 +17,14 @@ export const StyledNavbar = styled.nav.attrs((props) => ({
   .navbar--logo {
     width: max(7vmin);
     height: max(7vmin);
-    margin: 1rem 0.5rem 0.5rem 4.5rem;
+    margin: 1.2rem 0.5rem 0.5rem 4.5rem;
     animation: rotate 0.7s ease-in-out 0.5s;
     z-index: 9;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
       height: max(7vmin);
       width: max(7vmin);
-      margin: 1.5rem 0rem 0rem 2rem;
+      margin: 1.8rem 0rem 0rem 2rem;
       z-index: 9;
     }
   }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledBurger = styled.button.attrs(props => ({className: props.className,}))`
     position absolute;
     top: 5%;
-    right: 6rem;
+    right: 5.4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -18,11 +18,6 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
         top: 5%;
         right: 2.5rem;
         height: max(7.0vmin);
-        
-    }
-
-    &:focus {
-    outline: none;
     }
      
     div {
@@ -32,14 +27,13 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
         border-radius: 10px;
         transition: all 0.3s linear;
         position: relative;
-        transform-origin: 1px;
+        transform-origin: 1px;   
 
         @media (max-width: ${({ theme }) => theme.mobile}) {
             width: max(6.5vmin);
         }
         
-    
-        :first-child {
+        :first-child { 
             transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
         }
 
@@ -49,7 +43,7 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
         }
         
         :nth-child(3) {
-            transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+            transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'}; 
         }   
       }
     }`;
