@@ -3,22 +3,12 @@ import { NavLink } from "react-router-dom";
 import { StyledMenu } from "./Menu.styled.jsx";
 import { bool } from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faBlog,
-  faFolderOpen,
-  faPaperclip,
-  faHome,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faLinkedin,
-  faGithub,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faBlog, faFolderOpen, faPaperclip, faHome,} from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub, faTwitter,} from "@fortawesome/free-brands-svg-icons";
 
 const menuLink = {
   textDecoration: "none",
-};
+}; 
 
 const Menu = ({ sticky, open, ...props }) => {
   const isHidden = open ? true : false;
@@ -26,11 +16,7 @@ const Menu = ({ sticky, open, ...props }) => {
 
   return (
       <StyledMenu
-        className={sticky ? "menuStick" : "menu"}
-        open={open}
-        aria-hidden={!isHidden}
-        {...props}
-      >
+        className={sticky ? "menuStick" : "menu"} open={open} aria-hidden={!isHidden} {...props}>
         <NavLink style={menuLink} to="/home">
           <div className="menu-items" tabIndex={tabIndex}>
             <span role="img" aria-label="Pricing" aria-hidden="true">

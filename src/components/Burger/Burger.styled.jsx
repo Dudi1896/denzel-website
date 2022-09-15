@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledBurger = styled.button.attrs(props => ({className: props.className,}))`
-    position absolute;
     top: 5%;
     right: 5.4rem;
     display: flex;
@@ -12,12 +11,13 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
     border: none;
     cursor: pointer;
     z-index: 10;
-    position:fixed;
+    position: fixed;
     
     @media (max-width: ${({ theme }) => theme.mobile}) {
         top: 5%;
         right: 2.5rem;
         height: max(7.0vmin);
+        position: ${({ open }) => open ? "fixed" : "absolute"};
     }
      
     div {

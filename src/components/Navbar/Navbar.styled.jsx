@@ -10,9 +10,12 @@ export const StyledNavbar = styled.nav.attrs((props) => ({
   position: absolute;
   z-index: 1;
   width: 100%;
-
   position: fixed;
   animation: moveDown 0.5s ease-in-out;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    position: absolute;
+  }
 
   .navbar--logo {
     width: max(7vmin);
