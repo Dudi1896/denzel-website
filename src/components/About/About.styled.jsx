@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const StyledAbout = styled.div`
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 85vh;   
+    width: 99vw;
     padding: 2rem;
-    width: min(100vmin);
-    color: #444;
+    border: 2px solid red;
     text-align: justify;
     margin: auto;
     color: ${({ theme }) => theme.PrimaryColor};
