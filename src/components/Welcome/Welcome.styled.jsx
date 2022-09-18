@@ -41,102 +41,190 @@ export const StyledWelcome = styled.div`
     }
 
 
-    
+.container {
+  width: 99vw;
+  height: 15vw;
+//   background: #232323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-        :root {
-        --dark #111
-        --light #fefefe
-        --color var(--dark)
-        --bg var(--light)
+  .box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .title {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: max(12vmin);
+
+      .block {
+        width: 0%;
+        height: inherit;
+        background: #ffb510;
+        position: absolute;
+        animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+        display: flex;
+      }
+
+      h1 {
+        font-family: "Segoe UI";
+        color: ${({ theme }) => theme.PrimaryColor};
+        font-size: max(8vmin);
+        -webkit-animation: mainFadeIn 2s forwards;
+        -o-animation: mainFadeIn 2s forwards;
+        animation: mainFadeIn 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
+        display: flex;
+        align-items: baseline;
+        position: relative;
+
+        span {
+          width:0px;
+          height: 0px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          background: #ffb510;
+          -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+          animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+          animation-delay: 2s;
+          margin-left: 5px;
+          margin-top: -10px;
+          position: absolute;
+          bottom: 13px;
+          right: -12px;
         }
+      }
+    }
 
-        @media (prefers-color-scheme: dark) {
-        --color white
-        --bg black
-        }
+    .role {
+      width: 90%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height:  min(10vmin);
+      margin-top: 1px;
 
-        body {
-        background-color black
-        display flex
-        align-items center
-        justify-content center
-        border: 2px white green
-        min-height 100vh
-        font-size 3.5rem
-        font-weight bold
-        }
+      .block {
+        width: 0%;
+        height: inherit;
+        background: #e91e63;
+        position: absolute;
+        animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+        animation-delay: 2s;
+        display: flex;
+      }
 
-        p {
-        max-width 350px
-        letter-spacing -9px
-        border 2px solid red
-        }
-
-        {
-        &[data-scroll='in']
-        [data-char]:after
-            animation-name glitch-switch
-        }
-
-        {
-        .reveal--2 [data-char]:after
-        animation-iteration-count var(--count)
-        }
+      p {
+        animation: secFadeIn 2s forwards;
+        animation-delay: 3.2s;
+        opacity: 0%;
+        font-weight: 900;
+        font-family: "Segoe UI";
+        color: ${({ theme }) => theme.DarkPrimary};
+        font-size: max(3vmin);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}
 
 
-        p:nth-of-type(1) {
-        position absolute
-        opacity 0
-        }
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
 
-        {
-        .word
-        position relative
-        display inline-block
-        }
+  }
+  50% {
+    width: 100%;
+    left: 0;
 
-        [data-char] {
-        color transparent
-        position relative
-        }
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
 
-        &:after {
-        --txt attr(data-char)
-        animation-duration .2s
-        animation-delay .5s
-        animation-timing-function steps(1)
-        animation-fill-mode backwards
-        content var(--txt)
-        color var(--color)
-        position absolute
-        left 0
-        top 0
-        }
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
 
-        @keyframes glitch-switch {
-        0%
-        content var(--char-0)
-        10%
-        content var(--char-1)
-        20%
-        content var(--char-2)
-        30%
-        content var(--char-3)
-        40%
-        content var(--char-4)
-        50%
-        content var(--char-5)
-        60%
-        content var(--char-6)
-        70%
-        content var(--char-7)
-        80%
-        content var(--char-8)
-        90%
-        content var(--char-9)
-        100%
-        content var(--txt)
-        }
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: ${({ theme }) => theme.DarkPrimary};
+    border: 1px solid red;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: ${({ theme }) => theme.DarkPrimary};
+    opacity: 1;
+    bottom: 45px;
+  }
+   65% {
+      width: 7px;
+    height: 7px;
+      bottom: 0px;
+      width: 15px
+   }
+   80% {
+      width: 10px;
+    height: 10px;
+      bottom: 20px
+   }
+  100% {
+    width: max(1.25vmin);
+    height: max(1.25vmin);
+    background: ${({ theme }) => theme.DarkPrimary};
+    border: 0px solid #222;
+    bottom: 13px;
+
+  }
+}
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 
 
 

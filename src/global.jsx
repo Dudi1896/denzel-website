@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
         height: 100%;
         overflow-x: hidden;
         text-rendering: optimizeLegibility;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lato", "Poppins";
       
         @media (max-width: ${({ theme }) => theme.mobile}) {
             min-height: 500px;
