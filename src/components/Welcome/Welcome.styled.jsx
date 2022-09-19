@@ -3,7 +3,7 @@ import bg from "../../assets/images/bg.svg";
 
 export const StyledWelcome = styled.div`
     background-image: url(${bg}); 
-    background-color: cream;
+    background-color: #232323;
     background-attachment: fixed;
     background-size: cover;
     height: 87vh;
@@ -44,10 +44,16 @@ export const StyledWelcome = styled.div`
 .container {
   width: 99vw;
   height: 15vw;
-//   background: #232323;
+  background: #232323;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding: 0rem 0rem 0rem 12rem;
   align-items: center;
+
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      padding: 0 0 10rem 0;
+      justify-content: center;
+  }
 
   .box {
     position: relative;
