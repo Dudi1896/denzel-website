@@ -1,11 +1,12 @@
 
 import React from 'react';
-const Resume = () => {
-   
+import { useNavigate } from "react-router-dom";
+
+const Resume = (props) => {
+  const navigate = useNavigate();
  return (
     <>
-    <h1 style={{color:"green"}}> 
-        This is a Resume Page.</h1>
+    <button onClick={() => navigate(-1)}>Should be my Resume :/ </button>
   </>
   )
 };

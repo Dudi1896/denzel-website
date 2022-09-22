@@ -30,9 +30,7 @@ const Menu = ({ sticky, open, ...props }) => {
       <BrowserRouter>
         <StyledMenu
           className={sticky ? "menuStick" : "menu"}
-          open={open}
-          aria-hidden={!isHidden}
-          {...props}
+          open={open} aria-hidden={!isHidden} {...props}
         >
           <NavLink style={menuLink} to="/">
             <div className="menu-items" tabIndex={tabIndex}>
@@ -113,7 +111,7 @@ const Menu = ({ sticky, open, ...props }) => {
           </div>
           <Routes>
             <Route exact path="/Home" element={<Home />} />
-            <Route exact path="/MyWork" element={<MyWork />} />
+            <Route exact path="MyWork" element={<MyWork />} />
             <Route exact path="/Blogs" element={<Blogs />} />
             <Route exact path="/Resume" element={<Resume />} />
           </Routes>

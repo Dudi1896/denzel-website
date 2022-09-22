@@ -10,3 +10,4 @@ export const theme ={
     LightPrimary: '#F8FAFC',
     mobile: '576px',
 }
+

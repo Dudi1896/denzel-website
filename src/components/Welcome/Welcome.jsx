@@ -15,7 +15,7 @@ const Welcome = ({ element }) => {
             <div class="title">
               <span class="block"></span>
               <h1>
-                Denzel Udemba<span></span>
+                My Name<span></span>
               </h1>
             </div>
             <div class="role">

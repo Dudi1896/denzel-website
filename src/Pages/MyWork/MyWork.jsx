@@ -1,11 +1,13 @@
 
 import React from 'react';
-const MyWork = () => {
-   
+import { useNavigate } from "react-router-dom";
+
+const MyWork = (props) => {
+   const navigate = useNavigate();
  return (
     <>
-    <h1 style={{color:"green"}}> 
-        This is a MyWork Page.</h1>
+    {/* <body style={"height: 100%; background-color: red; box-sizing: border-box;"}> This is a MyWork Page.</body> */}
+        <button onClick={() => navigate(-1)}>Should be my work :/ </button>
   </>
   )
 };
