@@ -27,6 +27,5 @@ export const GlobalStyles = createGlobalStyle`
         @media (max-width: ${({ theme }) => theme.mobile}) {
             min-height: 500px;
         }
-    
     }
       `;

@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import  React from "react";
+import { NavLink } from "react-router-dom";
 import { StyledMenu } from "./Menu.styled.jsx";
 import { bool } from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,6 @@ import {
   faGithub,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { Home, Resume, MyWork, Blogs } from "../../Pages";
 
 const menuLink = {
   textDecoration: "none",
@@ -27,7 +26,6 @@ const Menu = ({ sticky, open, ...props }) => {
 
   return (
     <>
-      <BrowserRouter>
         <StyledMenu
           className={sticky ? "menuStick" : "menu"}
           open={open} aria-hidden={!isHidden} {...props}
@@ -109,14 +107,7 @@ const Menu = ({ sticky, open, ...props }) => {
               </a>
             </div>
           </div>
-          <Routes>
-            <Route exact path="/Home" element={<Home />} />
-            <Route exact path="MyWork" element={<MyWork />} />
-            <Route exact path="/Blogs" element={<Blogs />} />
-            <Route exact path="/Resume" element={<Resume />} />
-          </Routes>
         </StyledMenu>
-      </BrowserRouter>
     </>
   );
 };
