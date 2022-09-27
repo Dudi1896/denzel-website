@@ -1,14 +1,19 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "../../global.jsx";
+import { theme } from "../../theme.jsx";
+import Header from "../../components/Header";
 
-const Blogs = (props) => {
-  const navigate = useNavigate();
+const Blogs = () => {
 
   return (
-    <div>
-          <button onClick={() => navigate(-1)}>Should be my Blog :/ </button>
-    </div>
+      <div>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Header />
+        </ThemeProvider>
+      </div>
   );
 };
 

@@ -1,9 +1,7 @@
 import React from "react";
-
 import Portrait from "../../assets/images/portrait.jpg";
 import { StyledWelcome } from "./Welcome.styled.jsx";
-import About from "../About/About.jsx";
-import LazyShow from "../../Hooks/LazyShow";
+
 
 const Welcome = ({ element }) => {
   return (
@@ -15,7 +13,7 @@ const Welcome = ({ element }) => {
             <div class="title">
               <span class="block"></span>
               <h1>
-                My Name<span></span>
+               Denzel Udemba<span></span>
               </h1>
             </div>
             <div class="role">

@@ -12,6 +12,7 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
     cursor: pointer;
     z-index: 10;
     position: fixed;
+    animation: moveDown 1.2s ease-in-out;
     
     @media (max-width: ${({ theme }) => theme.mobile}) {
         top: 5%;

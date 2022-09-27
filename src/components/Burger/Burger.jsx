@@ -4,7 +4,11 @@ import { StyledBurger } from "./Burger.styled.jsx";
 
 const Burger = ({ sticky, open, setOpen }) => {
   return (
-    <StyledBurger className={sticky ? "burger-menu" : "burger"} open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger
+      className={sticky ? "burger-menu" : "burger"}
+      open={open}
+      onClick={() => setOpen(!open)}
+    >
       <div />
       <div />
       <div />

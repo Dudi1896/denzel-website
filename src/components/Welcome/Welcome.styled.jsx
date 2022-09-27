@@ -8,10 +8,10 @@ export const StyledWelcome = styled.div`
     background-size: cover;
     height: 87vh;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
     text-align: center;  
-    width: 99vw;
+    width: 100%;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
         justify-content: center;
@@ -42,20 +42,21 @@ export const StyledWelcome = styled.div`
 
 
 .container {
-  width: 99vw;
+  width: 100%;
+  border: 2px solid green;
   height: 15vw;
   background: #232323;
   display: flex;
-  justify-content: left;
-  padding: 0rem 0rem 0rem 12rem;
+  margin: 0rem 0rem 0rem 12rem;
   align-items: center;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      padding: 0 0 10rem 0;
+      margin: 0 0 1rem 0;
       justify-content: center;
   }
 
   .box {
+    border: 2px solid violet;
     position: relative;
     display: flex;
     justify-content: center;

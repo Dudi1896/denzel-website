@@ -4,24 +4,28 @@ export const StyledNavbar = styled.nav.attrs((props) => ({
   className: props.className,
 }))`
   display: flex;
-  align-items: center;
+  // align-items: center;
+  left: 0;
   justify-content: space-between;
   padding: 1rem 1.5rem 1rem 1.5rem;
   position: absolute;
+  border: solid 2px red;
   z-index: 1;
   width: 100%;
   position: fixed;
-  animation: moveDown 0.5s ease-in-out;
+  animation: moveDown 1.2s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .navbar--logo {
     width: max(7vmin);
     height: max(7vmin);
     margin: 1.2rem 0.5rem 0.5rem 4.5rem;
-    animation: rotate 0.7s ease-in-out 0.5s;
+    animation: rotate 0.7s ease-in-out 1.2s;
     z-index: 9;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {

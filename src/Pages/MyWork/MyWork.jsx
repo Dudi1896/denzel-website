@@ -1,15 +1,19 @@
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "../../global.jsx";
+import { theme } from "../../theme.jsx";
+import Header from "../../components/Header";
 
-import React from 'react';
-import { useNavigate } from "react-router-dom";
 
-const MyWork = (props) => {
-   const navigate = useNavigate();
- return (
-    <>
-    {/* <body style={"height: 100%; background-color: red; box-sizing: border-box;"}> This is a MyWork Page.</body> */}
-        <button onClick={() => navigate(-1)}>Should be my work :/ </button>
-  </>
-  )
+const MyWork = () => {
+  return (
+    <div>
+      <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Header />
+      </ThemeProvider>
+    </div>
+  );
 };
-  
+
 export default MyWork;
