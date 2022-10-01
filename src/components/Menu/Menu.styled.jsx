@@ -14,6 +14,7 @@ export const StyledMenu = styled.nav.attrs((props) => ({
   width: min(40vmin);
   top: 4.6%;
   right: 0;
+  z-index: 9;
   transition: transform 0.3s ease-in-out;
   position: fixed;
   transform: ${({ open }) => (open ? "translateX(-25%)" : "translateX(100%)")};

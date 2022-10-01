@@ -1,9 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import MyWork from "./Pages/MyWork";
-import Blogs from "./Pages/Blogs";
-import Resume from "./Pages/Resume";
+import { Home, MyWork, Blogs, Resume } from "./Pages/";
 
 function App() {
   return (

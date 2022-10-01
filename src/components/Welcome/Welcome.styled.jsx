@@ -138,6 +138,7 @@ export const StyledWelcome = styled.div`
         font-size: max(3vmin);
         text-transform: uppercase;
         letter-spacing: 5px;
+        index-z: -2;
       }
     }
   }
