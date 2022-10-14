@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../../global.jsx";
 import { theme } from "../../theme.jsx";
 import Header from "../../components/Header";
-
+import Cards from "../../components/Cards";
 
 const MyWork = () => {
   return (
@@ -11,6 +11,7 @@ const MyWork = () => {
       <ThemeProvider theme={theme}>
           <GlobalStyles />
           <Header />
+          <Cards />
       </ThemeProvider>
     </div>
   );

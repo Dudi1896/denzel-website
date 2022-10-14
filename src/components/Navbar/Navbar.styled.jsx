@@ -4,8 +4,8 @@ export const StyledNavbar = styled.nav.attrs((props) => ({
   className: props.className,
 }))`
   display: flex;
-  // align-items: center;
   left: 0;
+  top: 0;
   justify-content: space-between;
   padding: 1rem 1.5rem 1rem 1.5rem;
   position: absolute;
