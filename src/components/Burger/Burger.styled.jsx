@@ -47,7 +47,7 @@ export const StyledBurger = styled.button.attrs(props => ({className: props.clas
             transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'}; 
         }   
       }
-    }`;
+`;
 
 
 
