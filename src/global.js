@@ -1,5 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-
+import styled, { createGlobalStyle } from "styled-components";
+import {theme} from "./theme";
+ 
 export const GlobalStyles = createGlobalStyle`
     html, body {
         margin: 0;
@@ -29,3 +30,27 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
       `;
+
+export const Button = styled.button`
+  border-radius: 4px;
+  background: ${({ primary }) =>
+    primary ? theme.purplePrimary : theme.bluePrimary};
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
+  color: ${({ primary }) => (primary ? theme.LightPrimary : theme.DarkPrimary)};
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    background: ${({ primary }) =>
+      primary ? theme.bluePrimary : theme.purplePrimary};
+  }
+
+  @media screen and (max-width: ${theme.mobile}) {
+    width: 100%;
+  }
+`;
