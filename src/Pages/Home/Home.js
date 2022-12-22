@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "../../global.jsx";
-import { theme } from "../../theme.jsx";
+import { GlobalStyles } from "../../global.js";
+import { theme } from "../../theme.js";
 import { Welcome } from "../../components";
 import Header from "../../components/Header";
 import useScrollSnap from "react-use-scroll-snap";

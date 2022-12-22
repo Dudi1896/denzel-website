@@ -1,6 +1,6 @@
 import React from "react";
 import Portrait from "../../assets/images/portrait.jpg";
-import { StyledWelcome } from "./Welcome.styled.jsx";
+import { StyledWelcome } from "./Welcome.styled.js";
 
 
 const Welcome = ({ element }) => {

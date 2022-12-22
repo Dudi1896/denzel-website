@@ -1,6 +1,6 @@
 import  React from "react";
 import { NavLink } from "react-router-dom";
-import { StyledMenu } from "./Menu.styled.jsx";
+import { StyledMenu } from "./Menu.styled.js";
 import { bool } from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

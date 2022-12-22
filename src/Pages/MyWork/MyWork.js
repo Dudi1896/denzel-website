@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "../../global.jsx";
-import { theme } from "../../theme.jsx";
+import { GlobalStyles } from "../../global";
+import { theme } from "../../theme";
 import Header from "../../components/Header";
 import Cards from "../../components/Cards";
 
