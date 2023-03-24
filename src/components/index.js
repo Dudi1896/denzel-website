@@ -1,7 +1,9 @@
-export { default as Burger } from "./Burger";
-export { default as Cards  } from "./Cards";
-export { default as Header } from "./Header";
-export { default as Menu } from "./Menu";
-export { default as Navbar } from "./Navbar";
-export { default as Welcome } from "./Welcome";
-export { default as Footer } from "./Footer";
+export { default as About } from "./About/About";
+export { default as Burger } from "./Burger/Burger";
+export { default as Cards  } from "./Cards/Cards";
+export { default as Header } from "./Header/Header";
+export { default as Menu } from "./Menu/Menu";
+export { default as Navbar } from "./Navbar/Navbar";
+export { default as Welcome } from "./Welcome/Welcome";
+export { default as Footer } from "./Footer/Footer";
+export { default as Section } from "./Section/Section";

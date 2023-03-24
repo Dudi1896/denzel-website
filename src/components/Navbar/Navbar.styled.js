@@ -9,7 +9,6 @@ export const StyledNavbar = styled.nav.attrs((props) => ({
   justify-content: space-between;
   padding: 1rem 1.5rem 1rem 1.5rem;
   position: absolute;
-  border: solid 2px red;
   z-index: 1;
   width: 100%;
   position: fixed;

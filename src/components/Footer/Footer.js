@@ -1,9 +1,6 @@
 import React from "react";
 import { Button } from "../../global";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
@@ -33,7 +30,7 @@ const Footer = ({ lightBg, lightText, theme }) => {
     <FooterContainer lightBg={lightBg}>
       <FooterSubscription lightText={lightText}>
         <FooterSubHeading>
-          Join our exclusive membership to recieve the latest news and trends
+          Send Me A Message
         </FooterSubHeading>
         <FooterSubText>You can unsubscribe at any time</FooterSubText>
         <Form theme={theme}>
@@ -43,45 +40,27 @@ const Footer = ({ lightBg, lightText, theme }) => {
             type="email"
             placeholder="Your Email"
           />
-          <Button fontBig>Subscription</Button>
+          <Button fontBig>Send</Button>
         </Form>
       </FooterSubscription>
       <FooterLinksContainer theme={theme}>
         
         <FooterLinksWrapper theme={theme}>
           <FooterLinksItems theme={theme}>
-            <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="sign-up">How it works</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
+            <FooterLinkTitle>SAY HELLO</FooterLinkTitle>
+            <FooterLink to="sign-up">denzelu181@gmail.com</FooterLink>
+
           </FooterLinksItems>
           <FooterLinksItems theme={theme}>
-            <FooterLinkTitle>Contact Us</FooterLinkTitle>
-            <FooterLink to="sign-up">How it works</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
+
           </FooterLinksItems>
           </FooterLinksWrapper>
         <FooterLinksWrapper theme={theme}>
           <FooterLinksItems theme={theme}>
-            <FooterLinkTitle>Videos</FooterLinkTitle>
-            <FooterLink to="sign-up">How it works</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
-          </FooterLinksItems>
-          <FooterLinksItems theme={theme}>
-            <FooterLinkTitle>Social Media</FooterLinkTitle>
-            <FooterLink to="sign-up">How it works</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
-            <FooterLink to="/">Careers</FooterLink>
-            <FooterLink to="/">Investors</FooterLink>
-            <FooterLink to="/">Terms of Service</FooterLink>
+            <FooterLinkTitle></FooterLinkTitle>
+            <FooterLink to="sign-up">My Work</FooterLink>
+            <FooterLink to="/">Blog</FooterLink>
+            <FooterLink to="/">Resume</FooterLink>
           </FooterLinksItems>
         </FooterLinksWrapper>
 
@@ -93,23 +72,6 @@ const Footer = ({ lightBg, lightText, theme }) => {
           </SocialLogo>
           <WebsiteRights>Denzel Udemba @ 2023</WebsiteRights>
           <SocialIcons>
-            <SocialIconLink href="/" target="_blank" aria-label="Facebook">
-              <FaFacebook />
-            </SocialIconLink>
-
-            <SocialIconLink href="/" target="_blank" aria-label="Instagram">
-              <FaInstagram />
-            </SocialIconLink>
-
-            <SocialIconLink
-              href="/https://www.youtube.com/watch?v=iP_HqoCuRI0"
-              target="_blank"
-              aria-label="Youtube"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube />
-              </SocialIconLink>
-
               <SocialIconLink href="/" target="_blank" aria-label="Twitter">
                 <FaTwitter />
               </SocialIconLink>

@@ -3,23 +3,23 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../../global.js";
 import { theme } from "../../theme.js";
 import { Welcome } from "../../components";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import useScrollSnap from "react-use-scroll-snap";
-import About from "../../components/About";
+import About from "../../components/About/About";
 
 const Home = () => {
-  const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
+  // const scrollRef = useRef(null);
+  // useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <div ref={scrollRef}>
+        {/* <div ref={scrollRef}> */}
           <GlobalStyles />
           <Header />
           <Welcome />
           <About />
           <About />
-        </div>
+        {/* </div> */}
       </ThemeProvider>
     </div>
   );

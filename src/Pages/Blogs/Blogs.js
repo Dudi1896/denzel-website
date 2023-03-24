@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../../global.js";
 import { theme } from "../../theme.js";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 
 const Blogs = () => {
 
