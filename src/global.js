@@ -62,7 +62,7 @@ max-width: 1250px;
 margin-right: auto;
 margin-left: auto;
 padding: 20 0px;
-/* border: dashed 2px darkcyan; */
+/* border: dashed 14px darkcyan; */
 
 @media screen and (max-wdth: ${theme.mobile}) {
     padding-right: 30px;

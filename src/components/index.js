@@ -1,6 +1,6 @@
 export { default as About } from "./About/About";
 export { default as Burger } from "./Burger/Burger";
-export { default as Cards  } from "./Cards/Cards";
+export { default as Cards  } from "./Cards/CardGrid";
 export { default as Header } from "./Header/Header";
 export { default as Menu } from "./Menu/Menu";
 export { default as Navbar } from "./Navbar/Navbar";

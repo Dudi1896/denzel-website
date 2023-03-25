@@ -3,11 +3,12 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../../global";
 import { theme } from "../../theme";
 import Header from "../../components/Header/Header";
-import Cards from "../../components/Cards/Cards";
 import { Welcome } from "../../components";
 import { Section } from "../../components"
 import About from "../../components/About/About";
 import { WorkObjOne } from "./Data";
+import { Tester } from "../../components/About/Data";
+import CardGrid from "../../components/Cards/CardGrid";
 
 const MyWork = () => {
   return (
@@ -17,8 +18,8 @@ const MyWork = () => {
           <Header />
           <Section {...WorkObjOne}/>
           {/* <Welcome /> */}
-          <About />
-          <Cards />
+          <About {...Tester} />
+          <CardGrid/>
       </ThemeProvider>
     </div>
   );
