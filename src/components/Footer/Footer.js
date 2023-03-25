@@ -1,9 +1,6 @@
 import React from "react";
-import { Button } from "../../global";
-import {
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { Button, HoverScale } from "../../global";
+import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import {
   FooterContainer,
   FooterSubscription,
@@ -29,9 +26,7 @@ const Footer = ({ lightBg, lightText, theme }) => {
   return (
     <FooterContainer lightBg={lightBg}>
       <FooterSubscription lightText={lightText}>
-        <FooterSubHeading>
-          Send Me A Message
-        </FooterSubHeading>
+        <FooterSubHeading>Send Me A Message</FooterSubHeading>
         <FooterSubText>You can unsubscribe at any time</FooterSubText>
         <Form theme={theme}>
           <FormInput
@@ -44,17 +39,13 @@ const Footer = ({ lightBg, lightText, theme }) => {
         </Form>
       </FooterSubscription>
       <FooterLinksContainer theme={theme}>
-        
         <FooterLinksWrapper theme={theme}>
           <FooterLinksItems theme={theme}>
             <FooterLinkTitle>SAY HELLO</FooterLinkTitle>
             <FooterLink to="sign-up">denzelu181@gmail.com</FooterLink>
-
           </FooterLinksItems>
-          <FooterLinksItems theme={theme}>
-
-          </FooterLinksItems>
-          </FooterLinksWrapper>
+          <FooterLinksItems theme={theme}></FooterLinksItems>
+        </FooterLinksWrapper>
         <FooterLinksWrapper theme={theme}>
           <FooterLinksItems theme={theme}>
             <FooterLinkTitle></FooterLinkTitle>
@@ -63,7 +54,6 @@ const Footer = ({ lightBg, lightText, theme }) => {
             <FooterLink to="/">Resume</FooterLink>
           </FooterLinksItems>
         </FooterLinksWrapper>
-
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap theme={theme}>
@@ -72,13 +62,23 @@ const Footer = ({ lightBg, lightText, theme }) => {
           </SocialLogo>
           <WebsiteRights>Denzel Udemba @ 2023</WebsiteRights>
           <SocialIcons>
+            <HoverScale>
               <SocialIconLink href="/" target="_blank" aria-label="Twitter">
                 <FaTwitter />
               </SocialIconLink>
+            </HoverScale>
 
+            <HoverScale>
               <SocialIconLink href="/" target="_blank" aria-label="Linkedin">
                 <FaLinkedin />
-            </SocialIconLink>
+              </SocialIconLink>
+            </HoverScale>
+
+            <HoverScale>
+              <SocialIconLink href="/" target="_blank" aria-label="Github">
+                <FaGithub />
+              </SocialIconLink>
+            </HoverScale>
           </SocialIcons>
         </SocialMediaWrap>
       </SocialMedia>

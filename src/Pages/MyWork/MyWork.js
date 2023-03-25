@@ -16,7 +16,7 @@ const MyWork = () => {
       <ThemeProvider theme={theme}>
           <GlobalStyles />
           <Header />
-          <Section {...WorkObjOne}/>
+          {/* <Section {...WorkObjOne}/> */}
           {/* <Welcome /> */}
           <About {...Tester} />
           <Cards {...HomeObjOne}/>

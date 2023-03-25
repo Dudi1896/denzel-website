@@ -69,3 +69,18 @@ padding: 20 0px;
     padding-left: 30px; 
 }
 `;
+
+export const HoverScale = styled.div`
+  &:hover {
+    transform: scale(1.06);
+    transition: all 0.3s ease-out;
+    /* color: #1c2237; */
+  }
+  @media screen and (max-width: ${theme.tablet}) {
+    width: 90%;
+    margin: 30px 0;
+    &:hover {
+      transform: none;
+    }
+  }
+`;
