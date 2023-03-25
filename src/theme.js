@@ -8,7 +8,8 @@ export const theme ={
     DarkPrimary: '#164E63',
     MidPrimary: '#BEC9DF',
     LightPrimary: '#F8FAFC',
-    mobile: '576px',
+    mobile: '676px',
+    tablet: '1200px',
 
 
 

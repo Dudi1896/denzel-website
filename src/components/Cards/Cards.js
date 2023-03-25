@@ -1,9 +1,11 @@
 import React from "react";
-import { CardGridWrapper, Card } from "./Cards.styled";
-import data from "./data";
+import { CardGridWrapper, Card, CardSec } from "./Cards.styled";
+import { data } from "./data";
 
-const CardGrid = () => {
+const Cards = ({lightBg}) => {
     return (
+      <>
+      <CardSec lightBg={lightBg}>
       <CardGridWrapper>
         {data.map(item => (
           <Card key={item.id}>
@@ -13,7 +15,9 @@ const CardGrid = () => {
           </Card>
         ))}
       </CardGridWrapper>
+      </CardSec>
+      </>
     );
   };
 
-export default CardGrid;
+export default Cards;

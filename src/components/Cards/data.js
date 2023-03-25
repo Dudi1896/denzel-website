@@ -1,4 +1,22 @@
-const data = [
+export const HomeObjOne = {
+  lightBg: true,
+  primary: true,
+  topLine: 'Marketing Agency',
+  imgStart:'',
+  lightTopLine: true,
+  lightTextDesc: true,
+  buttonLabel: 'Get Started',
+  description: 'We help business owners increase their revenue. ' + 
+  'Our team of unique specialist can help you acheive your business goals',
+  headline: 'Lead Generation Specialist for Online Businesses',
+  lightText: false,
+  img: require('../../assets/images/burger.png'),
+  alt: 'Image',
+  start: ''
+};
+
+
+export const data = [
   {
     id: 1,
     title: "Card 1",
@@ -52,13 +70,5 @@ const data = [
     title: "Card 9",
     image: "https://picsum.photos/id/4/400/200",
     description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-  },
-  {
-    id: 10,
-    title: "Card 10",
-    image: "https://picsum.photos/id/5/400/200",
-    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }
-]
-
-export default data;
+];

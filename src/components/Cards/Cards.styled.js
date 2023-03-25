@@ -2,6 +2,33 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../theme";
 
+export const CardSec = styled.div`
+  color: ${({ lightText }) => (lightText ? theme.LightPrimary : theme.primaryDark)};
+  padding: 160px 0;
+  background: ${({ lightBg }) => (lightBg ? theme.LightPrimary : theme.primaryDark )};
+`
+
+export const CardGridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 20px;
+  border: 2px dashed red;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  @media screen and (max-width: ${theme.tablet}) {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    padding: 0 10px;
+  }
+
+  @media screen and (max-width: ${theme.mobile}) {
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+    padding:  0 10px;
+  }
+
+`;
+
 export const Card = styled.div`
   background-color: #ffffff;
   border-radius: 10px;
@@ -25,12 +52,4 @@ export const Card = styled.div`
   }
 `;
 
-export const CardGridWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  gap: 20px;
-  border: 2px dashed red;
-  padding: 0 50px;
-  max-width: 1250px;
-  margin: 0 auto;
-`;
+
