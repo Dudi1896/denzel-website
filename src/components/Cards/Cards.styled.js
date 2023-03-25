@@ -18,13 +18,14 @@ export const CardGridWrapper = styled.div`
 
   @media screen and (max-width: ${theme.tablet}) {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
-    padding: 0 10px;
+    padding: 0 20px;
+    justify-content: center;
   }
 
   @media screen and (max-width: ${theme.mobile}) {
     grid-template-columns: repeat(1, auto);
     justify-content: center;
-    padding:  0 10px;
+    padding:  0 15px;
   }
 
 `;
