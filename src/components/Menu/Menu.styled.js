@@ -22,10 +22,10 @@ export const StyledMenu = styled.nav.attrs((props) => ({
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
     z-index: 3;
-    height: 100vh;
+    height: 110vh;
     transform: ${({ open }) => (open ? "translateX(0%)" : "translateX(100%)")};
     top: 0px;
-    padding: 10rem 0rem;
+    padding: 4.5rem 0rem;
     position: fixed;
   }
 
@@ -43,7 +43,7 @@ export const StyledMenu = styled.nav.attrs((props) => ({
     }
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.85rem;
+      font-size: 1.15rem;
       text-align: left;
       padding: 2rem 3.45rem;
     }
@@ -60,10 +60,15 @@ export const StyledMenu = styled.nav.attrs((props) => ({
     justify-content: center;
     font-size: min(2.75vmin);
     margin-top: min(5vmin);
+    border: 2px dashed green;
+
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+          /* width: 100px; */
+    }
 
     .social {
       @media (max-width: ${({ theme }) => theme.mobile}) {
-        padding: 4rem 1.7rem;
+        padding: 1.5rem 1rem;
       }
 
       a {
@@ -75,7 +80,7 @@ export const StyledMenu = styled.nav.attrs((props) => ({
         }
 
         @media (max-width: ${({ theme }) => theme.mobile}) {
-          font-size: 1.8rem;
+          font-size: 1.1rem;
         }
       }
     }
