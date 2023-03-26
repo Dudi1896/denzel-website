@@ -1,14 +1,14 @@
 import React from "react";
 import Logo from "../../assets/images/heart.jpg";
-import { StyledNavbar } from "./Navbar.styled.js";
+import { NavbarLogo, StyledNavbar } from "./Navbar.styled.js";
 
 const Navbar = (sticky) => {
   return (
-    <StyledNavbar className={sticky ? "navbar navbar-sticky" : "navbar"}>
-    <div className="navbar--logo-holder">
-      {sticky ? <img src={Logo} alt="logo" className="navbar--logo" /> : null}
-    </div>
-  </StyledNavbar>
+    <StyledNavbar sticky={sticky}>
+      <NavbarLogo>
+        <img src={Logo} alt="logo" />
+      </NavbarLogo>
+    </StyledNavbar>
   );
 };
 
