@@ -16,7 +16,7 @@ export const StyledMenu = styled.nav`
   z-index: 9;
   transition: transform 0.2s ease-in-out;
   position: fixed;
-  transform: ${({ open }) => (open ? "translateX(-25%)" : "translateX(100%)")};
+  transform: ${({ open }) => (open ? "translateX(-35%)" : "translateX(100%)")};
 
   @media (max-width: ${theme.mobile}) {
     width: 100%;
@@ -28,8 +28,9 @@ export const StyledMenu = styled.nav`
     position: fixed;
   }
 
-  @media (min-width: ${theme.tablet}) {
+  @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
     height: min(60vmin);
+    transform: ${({ open }) => open ? "translateX(-10%)" : "translateX(100%)"};
   }
 `;
 
