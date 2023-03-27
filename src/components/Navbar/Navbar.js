@@ -1,15 +1,26 @@
 import React from "react";
 import Logo from "../../assets/images/heart.jpg";
-import { NavbarLogo, StyledNavbar } from "./Navbar.styled.js";
+import { bool, func } from "prop-types";
+import { NavbarLogo, StyledNavbar, StyledBurger } from "./Navbar.styled.js";
 
-const Navbar = (sticky) => {
+const Navbar = ({ open, setOpen }) => {
   return (
-    <StyledNavbar sticky={sticky}>
+    <StyledNavbar>
       <NavbarLogo>
         <img src={Logo} alt="logo" />
       </NavbarLogo>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
     </StyledNavbar>
   );
+};
+
+Navbar.propTypes = {
+  open: bool.isRequired,
+  setOpen: func.isRequired,
 };
 
 export default Navbar;

@@ -1,24 +1,21 @@
-import React from "react";
-import { bool, func } from "prop-types";
-import { StyledBurger } from "./Burger.styled.js";
+// import React from "react";
+// import { bool, func } from "prop-types";
+// import { StyledBurger } from "./Burger.styled.js";
 
-const Burger = ({ sticky, open, setOpen }) => {
-  return (
-    <StyledBurger
-      className={sticky ? "burger-menu" : "burger"}
-      open={open}
-      onClick={() => setOpen(!open)}
-    >
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
-  );
-};
+// const Burger = ({ open, setOpen }) => {
 
-Burger.propTypes = {
-  open: bool.isRequired,
-  setOpen: func.isRequired,
-};
+//   return (
+//         <StyledBurger open={open} onClick={() => setOpen(!open)}>
+//           <div />
+//           <div />
+//           <div />
+//         </StyledBurger>
+//   );
+// };
 
-export default Burger;
+// Burger.propTypes = {
+//   open: bool.isRequired,
+//   setOpen: func.isRequired,
+// };
+
+// export default Burger;
