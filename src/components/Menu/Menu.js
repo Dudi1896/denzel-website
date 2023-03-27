@@ -1,6 +1,12 @@
-import  React from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { StyledMenu } from "./Menu.styled.js";
+import {
+  StyledMenu,
+  MenuText,
+  MenuItems,
+  BoxSocial,
+  Social,
+} from "./Menu.styled.js";
 import { bool } from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,100 +21,92 @@ import {
   faGithub,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { HoverScale } from "../../global.js";
 
-const menuLink = {
-  textDecoration: "none",
-};
-
-const Menu = ({ sticky, open, ...props }) => {
+const Menu = ({ open, ...props }) => {
   const isHidden = open ? true : false;
   const tabIndex = isHidden ? 0 : -1;
 
   return (
-    <>
-        <StyledMenu
-          className={sticky ? "menuStick" : "menu"}
-          open={open} aria-hidden={!isHidden} {...props}
+    <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+      <NavLink to="/">
+        <MenuItems tabIndex={tabIndex}>
+          <span role="img" aria-label="Home" aria-hidden="true">
+            <FontAwesomeIcon icon={faHome} />
+          </span>
+          <MenuText>Home</MenuText>
+        </MenuItems>
+      </NavLink>
+
+      <NavLink to="/MyWork">
+        <MenuItems tabIndex={tabIndex}>
+          <span role="img" aria-label="My Work" aria-hidden="true">
+            <FontAwesomeIcon icon={faFolderOpen} />
+          </span>
+          <MenuText>My Work</MenuText>
+        </MenuItems>
+      </NavLink>
+
+      <NavLink to="/Blogs">
+        <MenuItems tabIndex={tabIndex}>
+          <span role="img" aria-label="Blogs" aria-hidden="true">
+            <FontAwesomeIcon icon={faBlog} />
+          </span>
+          <MenuText>Blog</MenuText>
+        </MenuItems>
+      </NavLink>
+
+      <NavLink to="/Resume">
+        <MenuItems tabIndex={tabIndex}>
+          <span role="img" aria-label="Resume" aria-hidden="true">
+            <FontAwesomeIcon icon={faPaperclip} />
+          </span>
+          <MenuText>Resume</MenuText>
+        </MenuItems>
+      </NavLink>
+
+      <BoxSocial tabIndex={tabIndex}>
+        <Social
+          href="https://www.linkedin.com/in/denzel-udemba-3500505b/"
+          target="_blank"
+          rel="noreferrer"
         >
-          <NavLink style={menuLink} to="/">
-            <div className="menu-items" tabIndex={tabIndex}>
-              <span role="img" aria-label="Home" aria-hidden="true">
-                <FontAwesomeIcon icon={faHome} />
-              </span>
-              &emsp;Home
-            </div>
-          </NavLink>
+          <HoverScale>
+            <FontAwesomeIcon icon={faLinkedin} />
+          </HoverScale>
+        </Social>
 
-          <NavLink style={menuLink} to="/MyWork">
-            <div className="menu-items" tabIndex={tabIndex}>
-              <span role="img" aria-label="My Work" aria-hidden="true">
-                <FontAwesomeIcon icon={faFolderOpen} />
-              </span>
-              &emsp;My Work
-            </div>
-          </NavLink>
+        <Social
+          href="https://github.com/Dudi1896"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <HoverScale>
+            <FontAwesomeIcon icon={faGithub} />{" "}
+          </HoverScale>
+        </Social>
 
-          <NavLink style={menuLink} to="/Blogs">
-            <div className="menu-items" tabIndex={tabIndex}>
-              <span role="img" aria-label="Blogs" aria-hidden="true">
-                <FontAwesomeIcon icon={faBlog} />
-              </span>
-              &emsp;Blog
-            </div>
-          </NavLink>
+        <Social
+          href="https://twitter.com/denzence"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <HoverScale>
+            <FontAwesomeIcon icon={faTwitter} />
+          </HoverScale>
+        </Social>
 
-          <NavLink style={menuLink} to="/Resume">
-            <div className="menu-items" tabIndex={tabIndex}>
-              <span role="img" aria-label="Resume" aria-hidden="true">
-                <FontAwesomeIcon icon={faPaperclip} />
-              </span>
-              &emsp;Resume
-            </div>
-          </NavLink>
-
-          <div className="box-social">
-            <div className="social" tabIndex={tabIndex}>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.linkedin.com/in/denzel-udemba-3500505b/"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </div>
-
-            <div className="social" tabIndex={tabIndex}>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/Dudi1896"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </div>
-
-            <div className="social" tabIndex={tabIndex}>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://twitter.com/denzence"
-              >
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-            </div>
-
-            <div className="social" tabIndex={tabIndex}>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="mailto:denzelu181@gmail.com"
-              >
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-            </div>
-          </div>
-        </StyledMenu>
-    </>
+        <Social
+          href="mailto:denzelu181@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <HoverScale>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </HoverScale>
+        </Social>
+      </BoxSocial>
+    </StyledMenu>
   );
 };
 

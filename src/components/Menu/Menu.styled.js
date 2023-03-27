@@ -1,25 +1,24 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
-export const StyledMenu = styled.nav.attrs((props) => ({
-  className: props.className,
-}))`
+export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background: ${({ theme }) => theme.MidPrimary};
-  height: min(50vmin);
+  height: min(55vmin);
   text-align: left;
   padding: 5rem 2rem;
   position: absolute;
   width: min(40vmin);
-  top: 4.6%;
+  top: 3.0%;
   right: 0;
   z-index: 9;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   position: fixed;
   transform: ${({ open }) => (open ? "translateX(-25%)" : "translateX(100%)")};
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${ theme.mobile }) {
     width: 100%;
     z-index: 3;
     height: 110vh;
@@ -29,60 +28,52 @@ export const StyledMenu = styled.nav.attrs((props) => ({
     position: fixed;
   }
 
-  .menu-items {
-    font-size: min(2.25vmin);
-    padding: min(1.5vmin);
-    text-align: left;
-    color: ${({ theme }) => theme.LightPrimary};
-    text-decoration: none;
-    transition: color 0.3s linear;
+  @media (min-width: ${ theme.tablet }) {
+    height: min(60vmin);
+  }
+`;
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+export const MenuText = styled.a`
+  margin-left: 20px;
+  font-size: min(2.25vmin);
 
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.15rem;
-      text-align: left;
-      padding: 2rem 3.45rem;
-    }
+  @media (max-width: ${ theme.mobile }) {
+    font-size: 1.15rem;
+  }
+`;
 
-    &:hover {
+export const MenuItems = styled.div`
+  padding: min(1.5vmin);
+  color: ${({ theme }) => theme.LightPrimary};
+  border: 2px solid pink;
+
+  &:hover {
+    color: ${({ theme }) => theme.primaryHover};
+  }
+
+  @media (max-width: ${ theme.mobile}) {
+    padding: 2rem 3.45rem;
+  }
+`;
+
+export const BoxSocial = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 18%;
+  border: 2px dashed green;
+  padding: 0;
+`;
+
+export const Social = styled.a`
+  font-size: min(2.75vmin);
+  color: ${({ theme }) => theme.LightPrimary};
+  margin: 0 10%;
+  &:hover {
       color: ${({ theme }) => theme.primaryHover};
-    }
   }
 
-
-
-  .box-social {
-    display: flex;
-    justify-content: center;
-    font-size: min(2.75vmin);
-    margin-top: min(5vmin);
-    border: 2px dashed green;
-
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-          /* width: 100px; */
+    @media (max-width: ${ theme.mobile }) {
+      font-size: 1.65rem;
+      margin: 0 8%;
     }
-
-    .social {
-      @media (max-width: ${({ theme }) => theme.mobile}) {
-        padding: 1.5rem 1rem;
-      }
-
-      a {
-        color: ${({ theme }) => theme.LightPrimary};
-        padding: min(3.3vmin);
-
-        &:hover {
-          color: ${({ theme }) => theme.primaryHover};
-        }
-
-        @media (max-width: ${({ theme }) => theme.mobile}) {
-          font-size: 1.1rem;
-        }
-      }
-    }
-  }
 `;

@@ -14,7 +14,8 @@ export const CardGridWrapper = styled.div`
   gap: 20px;
   border: 2px dashed red;
   max-width: 1250px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 
   @media screen and (max-width: ${theme.tablet}) {
     grid-template-columns: repeat(2, minmax(250px, 1fr));

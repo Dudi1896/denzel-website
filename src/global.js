@@ -2,13 +2,16 @@ import styled, { createGlobalStyle } from "styled-components";
 import {theme} from "./theme";
  
 export const GlobalStyles = createGlobalStyle`
-    html, body {
+    html, body, h1, h2, h3, h4, h5, h6 {
         margin: 0;
         padding: 0;
     }
     *, *::after, *::before {
         box-sizing: border-box;
+        text-decoration: none;
     }
+
+
 
     body {
         background: ${({ theme }) => theme.LightPrimary};
@@ -67,11 +70,8 @@ export const HoverScale = styled.div`
   &:hover {
     transform: scale(1.06);
     transition: all 0.3s ease-out;
-    /* color: #1c2237; */
   }
   @media screen and (max-width: ${theme.tablet}) {
-    width: 90%;
-    margin: 30px 0;
     &:hover {
       transform: none;
     }

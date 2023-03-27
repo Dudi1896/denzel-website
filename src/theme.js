@@ -9,7 +9,7 @@ export const theme ={
     MidPrimary: '#BEC9DF',
     LightPrimary: '#F8FAFC',
     mobile: '676px',
-    tablet: '1200px',
+    tablet: '1000px',
 
 
 
