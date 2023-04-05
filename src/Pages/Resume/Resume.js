@@ -12,10 +12,9 @@ import { data } from "./data";
 
 const styles = StyleSheet.create({
   group: {
-    flexDirection: "row",
-    // display: "flex",
-    // flexWrap: "wrap",
+    flexDirection: "column",
     border: "2px solid pink",
+    objectFit: 1,
   },
   page: {
     backgroundColor: "#E4E4E4",
@@ -33,41 +32,41 @@ const styles = StyleSheet.create({
     border: "2px dashed grey",
   },
   rightColumn: {
-    flex: "4",
+    flex: "3",
     top: 0,
     right: 0,
     border: "2px dashed red",
-    width: "70%",
+    // width: "70%",
   },
   header: {
     marginVertical: 5,
     paddingLeft: "10px",
     paddingRight: "10px",
     border: "2px solid green",
-    fontSize: "30px",
-    flexWrap: "wrap",
+    fontSize: "10px",
+    // flexWrap: "wrap",
     flex: 1,
-    overflow: "hidden",
-    wordWrap: "break-word",
+    // overflow: "hidden",
+    // wordWrap: "break-word",
   },
   summary: {
-    flex: 1,
+    flex: 2,
     border: "2px solid red",
-    fontSize: "9px",
+    fontSize: "12px",
   },
   section: {
     marginVertical: 5,
     paddingLeft: "10px",
     paddingRight: "10px",
     border: "2px solid green",
-    fontSize: "9px",
+    fontSize: "12px",
   },
   box: {
     maxWidth: "132px",
     marginVertical: 5,
     padding: 5,
     border: "2px solid blue",
-    fontSize: "9px",
+    fontSize: "12px",
     flexDirection: "column",
     alignContent: "center",
   },
@@ -93,16 +92,21 @@ const Resume = () => (
               <View style={styles.box} key={index}>
                 <Text>{addr.website}</Text>
                 <Text>{addr.address}</Text>
+                <Text>{addr.email}</Text>
               </View>
             ))}
 
+            <Text>Core Technologies</Text>
             <View style={styles.box}>
+              <Text>Core Technologies</Text>
               {data.technologies.map((techs, index) => (
                 <Text key={index}>• {techs}</Text>
               ))}
             </View>
 
+            <Text>Other Skills</Text>
             <View style={styles.box}>
+            <Text>Other Skills</Text>
               {data.otherProficiencies.map((prof, index) => (
                 <Text key={index}>• {prof}</Text>
               ))}
@@ -116,6 +120,7 @@ const Resume = () => (
                 <Text>{header.name}</Text>
                 <Text>{header.occupation}</Text>
               </View>
+
             ))}
 
             {data.summary.map((summary, index) => (
@@ -125,20 +130,72 @@ const Resume = () => (
             ))}
           </View>
 
+          <Text>Work Experience</Text>
           {data.companies.map((company, index) => (
             <View style={styles.section} key={index}>
+              <Text>{company.title}</Text>
               <Text>{company.name}</Text>
               <Text>{company.role}</Text>
               <Text>{company.period}</Text>
-              <Text>{company.intro}</Text>
               {company.points.map((point, index) => (
                 <Text key={index}>• {point}</Text>
               ))}
             </View>
           ))}
+
+        <Text>Projects</Text>
+          {data.projects.map((proj, index) => (
+            <View style={styles.section} key={index}>
+              <Text>{proj.title1}</Text>
+              {proj.points1.map((point1, index) => (
+                <Text key={index}>• {point1}</Text>
+              ))}
+            </View>
+          ))}
+
+        {data.projects.map((proj, index) => (
+            <View style={styles.section} key={index}>
+              <Text>{proj.title2}</Text>
+              {proj.points2.map((point2, index) => (
+                <Text key={index}>• {point2}</Text>
+              ))}
+            </View>
+          ))}
+
+        {data.projects.map((proj, index) => (
+            <View style={styles.section} key={index}>
+              <Text>{proj.title3}</Text>
+              {proj.points3.map((point3, index) => (
+                <Text key={index}>• {point3}</Text>
+              ))}
+            </View>
+          ))} 
+
+        {data.projects.map((proj, index) => (
+            <View style={styles.section} key={index}>
+              <Text>{proj.title4}</Text>
+              {proj.points4.map((point4, index) => (
+                <Text key={index}>• {point4}</Text>
+              ))}
+            </View>
+          ))} 
+
+        <Text>Education</Text>
+          {data.education.map((education, index) => (
+            <View style={styles.section} key={index}>
+              <Text>{education.major1}</Text>
+              <Text>{education.grade1}</Text>
+              <Text>{education.school1}</Text>
+              <Text>{education.date1}</Text>
+
+              <Text>{education.major2}</Text>
+              <Text>{education.grade2}</Text>
+              <Text>{education.school2}</Text>
+              <Text>{education.date2}</Text>
+            </View>
+          ))}
+
           </View>
-
-
         </Page>
       </Document>
     </PDFViewer>
