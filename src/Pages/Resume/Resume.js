@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   group: {
     flexDirection: "column",
     border: "2px solid pink",
-    objectFit: 1,
+    minHeight: "150px",
   },
   page: {
     backgroundColor: "#E4E4E4",
@@ -43,16 +43,15 @@ const styles = StyleSheet.create({
     paddingLeft: "10px",
     paddingRight: "10px",
     border: "2px solid green",
-    fontSize: "10px",
-    // flexWrap: "wrap",
+    fontSize: "35px",
+    maxWidth: "350px",
     flex: 1,
-    // overflow: "hidden",
-    // wordWrap: "break-word",
   },
   summary: {
-    flex: 2,
+    flex: 1,
     border: "2px solid red",
     fontSize: "12px",
+    maxWidth: "400px",
   },
   section: {
     marginVertical: 5,
@@ -62,7 +61,7 @@ const styles = StyleSheet.create({
     fontSize: "12px",
   },
   box: {
-    maxWidth: "132px",
+    maxWidth: "165px",
     marginVertical: 5,
     padding: 5,
     border: "2px solid blue",
