@@ -9,13 +9,13 @@ const Cards = ({ lightBg }) => {
       <CardSec lightBg={lightBg}>
         <CardGridWrapper>
           {data.map((item) => (
-            <HoverScale>
-              <Card key={item.id}>
+            <Card key={item.id}>
+              <HoverScale>
                 <img src={item.image} alt={item.title} />
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
-              </Card>
-            </HoverScale>
+              </HoverScale>
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+            </Card>
           ))}
         </CardGridWrapper>
       </CardSec>

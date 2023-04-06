@@ -68,7 +68,7 @@ padding: 20 0px;
 
 export const HoverScale = styled.div`
   &:hover {
-    transform: scale(1.06);
+    transform: scale(1.009);
     transition: all 0.3s ease-out;
   }
   @media screen and (max-width: ${theme.tablet}) {

@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     paddingRight: 35,
     border: "3px solid blue",
     flexDirection: "row",
+    lineHeight: "1.5px",
   },
   leftColumn: {
     flex: "1",
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     border: "2px dashed grey",
   },
   rightColumn: {
-    flex: "3",
+    flex: "3.5",
     top: 0,
     right: 0,
     border: "2px dashed red",
