@@ -13,6 +13,7 @@ export const InfoRow = styled.div`
   margin: 0px -15px -15px -15px;
   padding: 5px;
   flex-wrap: wrap;
+  
   align-items: center;
   border: 2px solid green;
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
@@ -30,7 +31,7 @@ export const InfoColumn = styled.div`
     flex-basis: 100%;
     display: flex;
     display: flex;
-    justif-content: center;
+    justify-content: center;
   }
 `;
 
@@ -46,9 +47,20 @@ export const TextWrapper = styled.div`
 
 export const ImgWrapper = styled.div`
   border: 2px dashed violet;
-  max-width: 555px;
+  max-width: 633px;
   display: flex;
   justify-content: ${({ start }) => (start ? 'flex-start': 'flex-end' )};
+  padding-left: 75px;
+
+  background: url("https://avatars.githubusercontent.com/u/17666999?v=4") center;
+  font-size: 8px;
+  line-height: 10px;
+  background-size: 1000px 1000px;
+
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255,255,255,.1);
 `;
 
 export const Img = styled.img`
@@ -87,4 +99,11 @@ export const Subtitle = styled.p`
   line-height: 24px;
   border: 2px solid cornflowerblue;
   color: ${({ lightTextDesc }) => (lightTextDesc ? theme.LightPrimary : theme.primaryDark)};
+`;
+
+
+export const Portrait = styled.div`
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: rgba(255,255,255,.1); */
 `;

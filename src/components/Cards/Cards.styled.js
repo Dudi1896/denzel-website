@@ -13,7 +13,7 @@ export const CardSec = styled.div`
 export const CardGridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 40px;
   border: 2px dashed red;
   max-width: 1450px;
   margin-right: auto;
@@ -37,7 +37,7 @@ export const Card = styled.div`
   box-shadow: 8px 8px;
   background: rgba(255,255,255,0.4);
   border: 2px solid black;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 20px;
   min-height: 350px;
 
@@ -53,6 +53,17 @@ export const Card = styled.div`
   h2 {
     font-size: 18px;
     margin-bottom: 10px;
+  }
+
+
+  a{
+    font-size: min(4.75vmin);
+  color: ${({ theme }) => theme.PrimaryColor};
+  /* margin: 0 10%; */
+  &:hover {
+    color: ${({ theme }) => theme.primaryHover};
+  }
+
   }
 
   p {

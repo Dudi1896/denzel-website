@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import bg from "../../assets/images/bg.svg";
+import Portrait from "../../assets/images/portrait.jpg";
 
 export const StyledWelcome = styled.div`
     background-image: url(${bg}); 
@@ -138,7 +139,7 @@ export const StyledWelcome = styled.div`
         font-size: max(3vmin);
         text-transform: uppercase;
         letter-spacing: 5px;
-        index-z: -2;
+        /* index-z: -2; */
       }
     }
   }
@@ -236,5 +237,5 @@ export const StyledWelcome = styled.div`
 
 
 
-}
+
 `;

@@ -11,7 +11,10 @@ import {
   TopLine,
   Heading,
   Subtitle,
+  Portrait,
 } from "./Section.styles";
+
+import { data, Port } from "../Cards/data";
 
 const Section = ({
   primary,
@@ -46,7 +49,111 @@ const Section = ({
               </TextWrapper>
             </InfoColumn>
             <ImgWrapper start={start}>
-              <Img src={img} alt={alt} />
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              amet" + "cum officiis necessitatibus odio, itaque, dolores rem
+              quam, culpa ipsa ratione temporibus" + "beatae aliquid? Natus
+              aperiam totam dicta sunt maxime in iste quae tempore ipsam
+              inventore" + "mollitia ut nihil, nobis dolores officia cumque est
+              rerum illum reiciendis exercitationem ratione" + "quibusdam
+              numquam perferendis? Officia laudantium porro expedita, deserunt
+              molestias enim asperiores" + "aperiam minima possimus veniam
+              eligendi, architecto quae hic, fugit mollitia dolores aliquam?
+              Natus" + "error doloremque quasi autem distinctio iure nam.
+              Possimus eaque quod aut autem numquam suscipit at vel" + "rem
+              voluptatem totam dicta ratione magnam recusandae tempora cum,
+              natus repellendus sint ea optio. Harum"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              amet" + "cum officiis necessitatibus odio, itaque, dolores rem
+              quam, culpa ipsa ratione temporibus" + "beatae aliquid? Natus
+              aperiam totam dicta sunt maxime in iste quae tempore ipsam
+              inventore" + "mollitia ut nihil, nobis dolores officia cumque est
+              rerum illum reiciendis exercitationem ratione" + "quibusdam
+              numquam perferendis? Officia laudantium porro expedita, deserunt
+              molestias enim asperiores" + "aperiam minima possimus veniam
+              eligendi, architecto quae hic, fugit mollitia dolores aliquam?
+              Natus" + "error doloremque quasi autem distinctio iure nam.
+              Possimus eaque quod aut autem numquam suscipit at vel" + "rem
+              voluptatem totam dicta ratione magnam recusandae tempora cum,
+              natus repellendus sint ea optio. Harum"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              amet" + "cum officiis necessitatibus odio, itaque, dolores rem
+              quam, culpa ipsa ratione temporibus" + "beatae aliquid? Natus
+              aperiam totam dicta sunt maxime in iste quae tempore ipsam
+              inventore" + "mollitia ut nihil, nobis dolores officia cumque est
+              rerum illum reiciendis exercitationem ratione" + "quibusdam
+              numquam perferendis? Officia laudantium porro expedita, deserunt
+              molestias enim asperiores" + "aperiam minima possimus veniam
+              eligendi, architecto quae hic, fugit mollitia dolores aliquam?
+              Natus" + "error doloremque quasi autem distinctio iure nam.
+              Possimus eaque quod aut autem numquam suscipit at vel" + "rem
+              voluptatem totam dicta ratione magnam recusandae tempora cum,
+              natus repellendus sint ea optio. Harum"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              amet" + "cum officiis necessitatibus odio, itaque, dolores rem
+              quam, culpa ipsa ratione temporibus" + "beatae aliquid? Natus
+              aperiam totam dicta sunt maxime in iste quae tempore ipsam
+              inventore" + "mollitia ut nihil, nobis dolores officia cumque est
+              rerum illum reiciendis exercitationem ratione" + "quibusdam
+              numquam perferendis? Officia laudantium porro expedita, deserunt
+              molestias enim asperiores" + "aperiam minima possimus veniam
+              eligendi, architecto quae hic, fugit mollitia dolores aliquam?
+              Natus" + "error doloremque quasi autem distinctio iure nam.
+              Possimus eaque quod aut autem numquam suscipit at vel" + "rem
+              voluptatem totam dicta ratione magnam recusandae tempora cum,
+              natus repellendus sint ea optio. Harum"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              amet" + "cum officiis necessitatibus odio, itaque, dolores rem
+              quam, culpa ipsa ratione temporibus" + "beatae aliquid? Natus
+              aperiam totam dicta sunt maxime in iste quae tempore ipsam
+              inventore" + "mollitia ut nihil, nobis dolores officia cumque est
+              rerum illum reiciendis exercitationem ratione" + "quibusdam
+              numquam perferendis? Officia laudantium porro expedita, deserunt
+              molestias enim asperiores" + "aperiam minima possimus veniam
+              eligendi, architecto quae hic, fugit mollitia dolores aliquam?
+              Natus" + "error doloremque quasi autem distinctio iure nam.
+              Possimus eaque quod aut autem numquam suscipit at vel" + "rem
+              voluptatem totam dicta ratione magnam recusandae tempora cum,
+              natus repellendus sint ea optio. Harum"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              amet" + "cum officiis necessitatibus odio, itaque, dolores rem
+              quam, culpa ipsa ratione temporibus" + "beatae aliquid? Natus
+              aperiam totam dicta sunt maxime in iste quae tempore ipsam
+              inventore" + "mollitia ut nihil, nobis dolores officia cumque est
+              rerum illum reiciendis exercitationem ratione" + "quibusdam
+              numquam perferendis? Officia laudantium porro expedita, deserunt
+              molestias enim asperiores" + "aperiam minima possimus veniam
+              eligendi, architecto quae hic, fugit mollitia dolores aliquam?
+              Natus" + "error doloremque quasi autem distinctio iure nam.
+              Possimus eaque quod aut autem numquam suscipit at vel" + "rem
+              voluptatem totam dicta ratione magnam recusandae tempora cum,
+              natus repellendus sint ea optio. Harum"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              amet" + "cum officiis necessitatibus odio, itaque, dolores rem
+              quam, culpa ipsa ratione temporibus" + "beatae aliquid? Natus
+              aperiam totam dicta sunt maxime in iste quae tempore ipsam
+              inventore" + "mollitia ut nihil, nobis dolores officia cumque est
+              rerum illum reiciendis exercitationem ratione" + "quibusdam
+              numquam perferendis? Officia laudantium porro expedita, deserunt
+              molestias enim asperiores" + "aperiam minima possimus veniam
+              eligendi, architecto quae hic, fugit mollitia dolores aliquam?
+              Natus" + "error doloremque quasi autem distinctio iure nam.
+              Possimus eaque quod aut autem numquam suscipit at vel" + "rem
+              voluptatem totam dicta ratione magnam recusandae tempora cum,
+              natus repellendus sint ea optio. Harum"
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              amet" + "cum officiis necessitatibus odio, itaque, dolores rem
+              quam, culpa ipsa ratione temporibus" + "beatae aliquid? Natus
+              aperiam totam dicta sunt maxime in iste quae tempore ipsam
+              inventore" + "mollitia ut nihil, nobis dolores officia cumque est
+              rerum illum reiciendis exercitationem ratione" + "quibusdam
+              numquam perferendis? Officia laudantium porro expedita, deserunt
+              molestias enim asperiores" + "aperiam minima possimus veniam
+              eligendi, architecto quae hic, fugit mollitia dolores aliquam?
+              Natus" + "error doloremque quasi autem distinctio iure nam.
+              Possimus eaque quod aut autem numquam suscipit at vel" + "rem
+              voluptatem totam dicta ratione magnam recusandae tempora cum,
+              natus repellendus sint ea optio. Harum"
+              {/* <Img src={img} alt={alt} /> */}
             </ImgWrapper>
           </InfoRow>
         </Container>
