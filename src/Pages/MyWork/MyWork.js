@@ -8,7 +8,7 @@ import { Section } from "../../components"
 import About from "../../components/About/About";
 import { WorkObjOne } from "./Data";
 import { Tester } from "../../components/About/Data";
-import { HomeObjOne } from "../../components/Cards/data";
+import { HomeObjOne, data } from "../../components/Cards/data";
 
 const MyWork = () => {
   return (
@@ -17,9 +17,8 @@ const MyWork = () => {
           <GlobalStyles />
           <Header />
           {/* <Section {...WorkObjOne}/> */}
-          {/* <Welcome /> */}
           <About {...Tester} />
-          <Cards {...HomeObjOne}/>
+          <Cards data={data} {...HomeObjOne}/>
           <Footer />
       </ThemeProvider>
     </div>

@@ -34,6 +34,8 @@ export const Button = styled.button`
   padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
   color: ${ theme.LightColor };
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  display:  ${({ hide}) => (hide ? "none" : "block" )} ;
+ 
   outline: none;
   border: none;
   cursor: pointer;
@@ -42,6 +44,7 @@ export const Button = styled.button`
     transition: all 0.3s ease-out;
     background: #fff;
     color: ${ theme.DarkColor };
+    border: 2px solid ${ theme.DarkColor};
     background: ${({ primary }) =>
       primary ? theme.bluePrimary : theme.purplePrimary};
   }

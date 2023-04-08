@@ -101,9 +101,3 @@ export const Subtitle = styled.p`
   color: ${({ lightTextDesc }) => (lightTextDesc ? theme.LightPrimary : theme.primaryDark)};
 `;
 
-
-export const Portrait = styled.div`
-  /* background-clip: text; */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: rgba(255,255,255,.1); */
-`;

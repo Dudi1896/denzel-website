@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import bg from "../../assets/images/bg.svg";
+import bg from "../../assets/images/WelcomeBG.svg";
 import Portrait from "../../assets/images/portrait.jpg";
 
 export const StyledWelcome = styled.div`
     background-image: url(${bg}); 
-    background-color: #232323;
+    /* background-color: ; */
     background-attachment: fixed;
     background-size: cover;
     height: 87vh;
