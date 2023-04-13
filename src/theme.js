@@ -19,6 +19,7 @@ export const theme ={
     DarkColor: '#0e1011', 
     MidColor: '#CBD5E1',
     LightColor: '#F8FAFC',
+    PinkViolet: '#EE82EE',
     
     HorzGrade: 'linear-gradient(to right, rgb(78, 26, 112) , rgb(43, 76, 242))',
     MixGrade: 'linear-gradient(to bottom right, rgb(78, 26, 112) , rgb(43, 76, 242))',

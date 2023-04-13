@@ -3,7 +3,6 @@ import bg from "../../assets/images/herobg_auto_x2_colored_light_ai.jpg";
 
 export const StyledWelcome = styled.div`
     background-image: url(${bg}); 
-    /* background-color: ; */
     background-attachment: fixed;
     background-size: cover;
     height: 87vh;
@@ -17,33 +16,9 @@ export const StyledWelcome = styled.div`
         justify-content: center;
     }
 
-    img{
-        width: 20rem;
-        margin-right: 15.5rem;
-        animation: rotate 0.7s ease-in-out 0.5s;
-        background-color: cream;
-        border-radius: 10%;
-        
-        @media (max-width: ${({ theme }) => theme.mobile}) {
-            margin: 0;
-            justify-content: center;
-        }
-    }
-
-    button {
-        background: ${({ theme }) => theme.LightPrimary};
-        color: ${({ theme }) => theme.PrimaryColor};
-        font-size: 2em;
-        margin: 1em;
-        padding: 0.25em 1em;
-        border: 3px solid ${({ theme }) => theme.PrimaryColor};
-        border-radius: 35px;
-    }
-
 
 .container {
   width: 100vw;
-  border: 2px solid green;
   display: flex;
   align-items: center;
   padding: 2px;
@@ -53,7 +28,6 @@ export const StyledWelcome = styled.div`
   }
 
   .box {
-    border: 2px solid violet;
     position: relative;
     display: flex;
     justify-content: center;
@@ -65,8 +39,6 @@ export const StyledWelcome = styled.div`
       position: relative;
       display: flex;
       align-items: center;
-      border: 2px solid yellow;
-      /* height: max(12vmin); */
 
       .block {
         width: 0%;
@@ -120,7 +92,6 @@ export const StyledWelcome = styled.div`
       .block {
         width: 0%;
         height: inherit;
-        background: #e91e63;
         position: absolute;
         animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
         animation-delay: 2s;
@@ -137,7 +108,6 @@ export const StyledWelcome = styled.div`
         font-size: max(3vmin);
         text-transform: uppercase;
         letter-spacing: 5px;
-        /* index-z: -2; */
       }
     }
   }

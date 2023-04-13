@@ -7,23 +7,18 @@ export const StyledNavbar = styled.div`
   z-index: 100;
   width: 100%;
   position: fixed;
-  border: 2px solid red;
   animation: moveDown 1.2s ease-in-out;
   top: 5%;
-  padding: 0 100px;
-
+  padding: 0 95px;
 
   @media (max-width: ${theme.mobile}) {
-  min-height: 42px;
-
+    min-height: 52px;
   }
 
   @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
-  min-height: 42px;
+    min-height: 49px;
+    padding: 0 40px;
   }
-
-
-
 
   @keyframes moveDown {
     from {
@@ -50,18 +45,17 @@ export const NavbarLogo = styled.div`
 
   @media (max-width: ${theme.mobile}) {
     position: ${({ open }) => (open ? "fixed" : "absolute")};
-    left: 1.0rem;
+    left: 1rem;
   }
 
   @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
     left: 4.3rem;
-
   }
 
   img {
-    width: max(25vmin);
+    height: 2.1rem ;
     @media (max-width: ${theme.mobile}) {
-      width: 145px;
+      height: 2.1rem;
     }
   }
 `;
@@ -71,37 +65,32 @@ export const StyledBurger = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: max(5vmin);
+  height: 2rem;
+  width: 2.3rem;
+  border: .1px transparent solid;
   background: transparent;
-  border: none;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     z-index: 100;
     right: 1.3rem;
-    height: max(9.6vmin);
+    height: 2rem;
     position: ${({ open }) => (open ? "fixed" : "absolute")};
   }
 
 
-  @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
-    /* width: 100%; */
-    right: 4.3rem;
-
-  }
-
 
   div {
-    width: max(4.9vmin);
+    width: 1.82rem;
     height: 0.25rem;
     background: ${({ theme, open }) =>
-      open ? theme.LightPrimary : theme.DarkPrimary};
+      open ? theme.LightPrimary : theme.PrimaryColor};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      width: max(9.6vmin);
+      width: 1.82rem;
     }
 
     :first-child {
