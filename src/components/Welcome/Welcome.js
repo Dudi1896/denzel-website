@@ -1,5 +1,4 @@
 import React from "react";
-import Portrait from "../../assets/images/portrait.jpg";
 import { StyledWelcome } from "./Welcome.styled.js";
 
 
@@ -7,7 +6,6 @@ const Welcome = ({ element }) => {
   return (
     <StyledWelcome>
       <div ref={element}>
-        {/* <img src={Portrait} alt="portrait" className="welcome--logo" /> */}
         <div class="container">
           <div class="box">
             <div class="title">

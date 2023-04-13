@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     *, *::after, *::before {
         box-sizing: border-box;
         text-decoration: none;
+        overflow-x: hidden;
     }
 
 

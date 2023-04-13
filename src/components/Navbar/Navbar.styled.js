@@ -7,17 +7,23 @@ export const StyledNavbar = styled.div`
   z-index: 100;
   width: 100%;
   position: fixed;
+  border: 2px solid red;
   animation: moveDown 1.2s ease-in-out;
   top: 5%;
-  padding: 0 160px;
+  padding: 0 100px;
 
-  @media (max-width: ${theme.tablet}) {
-    padding: 0 40px;
-  }
 
   @media (max-width: ${theme.mobile}) {
-    position: absolute;
+  min-height: 42px;
+
   }
+
+  @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
+  min-height: 42px;
+  }
+
+
+
 
   @keyframes moveDown {
     from {
@@ -41,14 +47,21 @@ export const StyledNavbar = styled.div`
 export const NavbarLogo = styled.div`
   animation: rotate 0.7s ease-in-out 1.2s;
   z-index: 9;
+
   @media (max-width: ${theme.mobile}) {
     position: ${({ open }) => (open ? "fixed" : "absolute")};
+    left: 1.0rem;
+  }
+
+  @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
+    left: 4.3rem;
+
   }
 
   img {
-    width: max(7vmin);
+    width: max(25vmin);
     @media (max-width: ${theme.mobile}) {
-      width: 60px;
+      width: 145px;
     }
   }
 `;
@@ -68,6 +81,14 @@ export const StyledBurger = styled.button`
     height: max(9.6vmin);
     position: ${({ open }) => (open ? "fixed" : "absolute")};
   }
+
+
+  @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
+    /* width: 100%; */
+    right: 4.3rem;
+
+  }
+
 
   div {
     width: max(4.9vmin);

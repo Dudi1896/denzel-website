@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/images/heart.jpg";
+import Logo from "../../assets/images/denzel-logo.png";
 import { bool, func } from "prop-types";
 import { NavbarLogo, StyledNavbar, StyledBurger } from "./Navbar.styled.js";
 

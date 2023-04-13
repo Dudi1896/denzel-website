@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import bg from "../../assets/images/WelcomeBG.svg";
-import Portrait from "../../assets/images/portrait.jpg";
+import bg from "../../assets/images/herobg_auto_x2_colored_light_ai.jpg";
 
 export const StyledWelcome = styled.div`
     background-image: url(${bg}); 
@@ -43,16 +42,13 @@ export const StyledWelcome = styled.div`
 
 
 .container {
-  width: 100%;
+  width: 100vw;
   border: 2px solid green;
-  height: 15vw;
-  background: #232323;
   display: flex;
-  margin: 0rem 0rem 0rem 12rem;
   align-items: center;
+  padding: 2px;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      margin: 0 0 1rem 0;
       justify-content: center;
   }
 
@@ -62,13 +58,15 @@ export const StyledWelcome = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 0 5vw;
 
     .title {
       width: 100%;
       position: relative;
       display: flex;
       align-items: center;
-      height: max(12vmin);
+      border: 2px solid yellow;
+      /* height: max(12vmin); */
 
       .block {
         width: 0%;

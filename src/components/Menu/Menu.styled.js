@@ -8,7 +8,7 @@ export const StyledMenu = styled.nav`
   background: ${({ theme }) => theme.MidPrimary};
   height: min(55vmin);
   text-align: left;
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   position: absolute;
   width: min(40vmin);
   top: 3%;
@@ -16,7 +16,7 @@ export const StyledMenu = styled.nav`
   z-index: 9;
   transition: transform 0.2s ease-in-out;
   position: fixed;
-  transform: ${({ open }) => (open ? "translateX(-35%)" : "translateX(100%)")};
+  transform: ${({ open }) => (open ? "translateX(-25%)" : "translateX(100%)")};
 
   @media (max-width: ${theme.mobile}) {
     width: 100%;
@@ -44,7 +44,7 @@ export const MenuText = styled.a`
 `;
 
 export const MenuItems = styled.div`
-  padding: min(1.5vmin);
+  padding: 10% 0;
   color: ${({ theme }) => theme.LightPrimary};
 
   &:hover {
@@ -59,20 +59,22 @@ export const MenuItems = styled.div`
 export const BoxSocial = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 18%;
+  margin-top: 5%;
   padding: 0;
+  justify-content: space-between;
+
 `;
 
 export const Social = styled.a`
   font-size: min(2.75vmin);
   color: ${({ theme }) => theme.LightPrimary};
-  margin: 0 10%;
+  padding: 0 5px;
   &:hover {
     color: ${({ theme }) => theme.primaryHover};
   }
 
   @media (max-width: ${theme.mobile}) {
     font-size: 1.65rem;
-    margin: 0 8%;
+    margin: 0 3vw;
   }
 `;
