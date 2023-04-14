@@ -15,4 +15,8 @@ export const CodeBlockBG = styled.div`
   }
 `;
 
-
+export const SubHeader = styled.div`
+  padding: 7px 4px;
+  font-size: 14px;
+  font-weight: 600;
+  `;
