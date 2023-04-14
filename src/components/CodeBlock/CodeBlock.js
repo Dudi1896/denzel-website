@@ -1,14 +1,18 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { CodeBlockBG,SubHeader } from "./CodeBlock.Styled";
+import { CodeBlockBG, SubHeader, HeaderClipBoard } from "./CodeBlock.Styled";
 import { SvgBGDesign, SvgWrapper } from "../../global";
-import { faClipboard } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faClipboard } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 const date = new Date();
 
-const dateString = date.toISOString().replace(/T/, ' ').replace(/\..+/, '');
+const dateString = date
+  .toISOString()
+  .replace(/T/, " ")
+  .replace(/\..+/, "");
 
 const dateTimeString = `${dateString}`;
 
@@ -24,16 +28,35 @@ ${dateTimeString} [200] payment_intent.succeeded
 `;
 
 const CodeBlock = () => {
-
+  const [copy, setCopy] = useState(false);
   return (
     <>
       <CodeBlockBG>
         <SvgWrapper>
           <SvgBGDesign>{codeHeader}</SvgBGDesign>
           <SubHeader>{codeSubHead}</SubHeader>
-          <SubHeader>
-            <FontAwesomeIcon icon={faClipboard}/> </SubHeader>
+
+          {copy ? (
+            <HeaderClipBoard>
+              <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>
+                <p>Copied!</p>
+            </HeaderClipBoard>
+          ) : (
+            <HeaderClipBoard
+              onClick={() => {
+                navigator.clipboard.writeText(codeString);
+                setCopy(true);
+                setTimeout(() => {
+                  setCopy(false);
+                }, 3000);
+              }}
+            >
+              <FontAwesomeIcon icon={faClipboard} />
+              <p>Copy Code</p>
+            </HeaderClipBoard>
+          )}
         </SvgWrapper>
+
         <SyntaxHighlighter
           language="bash"
           style={atomOneDarkReasonable}

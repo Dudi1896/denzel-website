@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
-import {theme} from "./theme";
- 
+import { theme } from "./theme";
+
 export const GlobalStyles = createGlobalStyle`
     html, body, h1, h2, h3, h4, h5, h6 {
         margin: 0;
@@ -33,10 +33,10 @@ export const Button = styled.button`
   background: ${theme.MixGrade};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
-  color: ${ theme.LightColor };
+  color: ${theme.LightColor};
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
-  display:  ${({ hide}) => (hide ? "none" : "block" )} ;
- 
+  display: ${({ hide }) => (hide ? "none" : "block")};
+
   outline: none;
   border: none;
   cursor: pointer;
@@ -44,8 +44,8 @@ export const Button = styled.button`
   &:hover {
     transition: all 0.3s ease-out;
     background: #fff;
-    color: ${ theme.DarkColor };
-    border: 2px solid ${ theme.DarkColor};
+    color: ${theme.DarkColor};
+    border: 2px solid ${theme.DarkColor};
     background: ${({ primary }) =>
       primary ? theme.bluePrimary : theme.purplePrimary};
   }
@@ -56,17 +56,17 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
-z-index: 1;
-width: 100%;
-max-width: 1250px;
-margin-right: auto;
-margin-left: auto;
-padding: 20 0px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1250px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20 0px;
 
-@media screen and (max-wdth: ${theme.mobile}) {
+  @media screen and (max-wdth: ${theme.mobile}) {
     padding-right: 30px;
-    padding-left: 30px; 
-}
+    padding-left: 30px;
+  }
 `;
 
 export const HoverScale = styled.div`
@@ -83,30 +83,31 @@ export const HoverScale = styled.div`
 
 export const Row = styled.div`
   &::after {
-  content: "";
-  display: table;
-  clear: both;
-}`;
+    content: "";
+    display: table;
+    clear: both;
+  }
+`;
 
 export const ColumnTwoThirds = styled.div`
-/* 2/3 column */
+  /* 2/3 column */
   float: left;
   width: 66.6%;
   border: 2px solid transparent;
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
-  width: 100%;
+    width: 100%;
   }
 `;
 
 export const ColumnOneThirds = styled.div`
-/* 1/3 column */
+  /* 1/3 column */
   float: left;
   width: 33.3%;
   border: 2px solid transparent;
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
-  width: 100%;
+    width: 100%;
   }
 `;
 
@@ -155,15 +156,15 @@ export const MainText = styled.p`
     100% {
       opacity: 100%;
     }
-  } 
+  }
 `;
-
 
 export const SvgWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 0;
   position: relative;
+  justify-content: space-between;
 `;
 
 export const SvgBGDesign = styled.div`
@@ -177,7 +178,7 @@ export const SvgBGDesign = styled.div`
     content: "";
     position: absolute;
     top: 50%;
-    left: 67px; 
+    left: 67px;
     transform: translateY(-50%);
     width: 0;
     height: 0;
@@ -185,13 +186,12 @@ export const SvgBGDesign = styled.div`
     border-left: 14px solid ${({ theme }) => theme.DarkColor};
     border-bottom: 16px solid transparent;
 
-    @media (max-width: ${({ theme }) => theme.tablet}) {
-    left: 66.8px; 
-  }
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      left: 66.7px;
+    }
 
-  @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
-    left: 66.4px; 
-  }
+    @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
+      left: 66.4px;
+    }
   }
 `;
-

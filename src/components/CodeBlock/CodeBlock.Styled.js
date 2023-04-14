@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const CodeBlockBG = styled.div`
   margin-left: 18vw;
-  margin-top: 20px;
+  margin-top: 19px;
   position: relative;
   top: -20px;
   background-color: grey;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
   margin-bottom: -20px;
+  padding:0;
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
     margin-bottom: -20px;
@@ -20,3 +21,20 @@ export const SubHeader = styled.div`
   font-size: 14px;
   font-weight: 600;
   `;
+
+export const HeaderClipBoard = styled.div`
+padding: 0px 6px;
+font-size: 18px;
+color: ${({ theme }) => theme.DarkPrimary};
+/* border: 2px solid whitesmoke; */
+display: flex;
+align-items: center;
+
+
+p{
+font-size: 12px;
+font-weight: 600;
+margin-left: 5px;
+padding: 0;
+}
+`;
