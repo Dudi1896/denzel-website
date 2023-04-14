@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledWelcome } from "./Welcome.styled.js";
-
+import CodeBlock from "../CodeBlock/CodeBlock.js";
 
 const Welcome = ({ element }) => {
   return (
@@ -11,7 +11,7 @@ const Welcome = ({ element }) => {
             <div class="title">
               <span class="block"></span>
               <h1>
-               Denzel Udemba<span></span>
+                Denzel Udemba<span></span>
               </h1>
             </div>
             <div class="role">
@@ -20,6 +20,7 @@ const Welcome = ({ element }) => {
             </div>
           </div>
         </div>
+        <CodeBlock />
       </div>
     </StyledWelcome>
   );
