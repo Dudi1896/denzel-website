@@ -1,10 +1,13 @@
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { xt256 } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { CodeBlockText, CodeBlockBG,CodeBlockHeader } from "./CodeBlock.Styled";
+import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { CodeBlockBG } from "./CodeBlock.Styled";
+import { SvgBGDesign, SvgWrapper, SubHeader } from "../../global";
 
 const CodeBlock = () => {
-    const codeHeader = `NodeJs C:/shell/service.exe`;
+  const codeHeader = `NORMAL`;
+  const codeSubHead = `Server.js`;
+
 
   const codeString = ` User@dudi1896 ~/Home
   $ node server.js && strip listen
@@ -16,12 +19,23 @@ const CodeBlock = () => {
   return (
     <>
       <CodeBlockBG>
-        <CodeBlockText>
-        {/* <CodeBlockHeader>{codeHeader}</CodeBlockHeader> */}
-          <SyntaxHighlighter language="bash" style={xt256} wrapLongLines={true}>
-            {codeString}
-          </SyntaxHighlighter>
-        </CodeBlockText>
+        <SvgWrapper>
+          <SvgBGDesign>{codeHeader}</SvgBGDesign>
+          <SubHeader>{codeSubHead}</SubHeader>
+        </SvgWrapper>
+        <SyntaxHighlighter
+          language="bash"
+          style={atomOneDarkReasonable}
+          wrapLongLines={true}
+          customStyle={{
+            padding: "5px 0px 15px 15px",
+            margin: "0px 1px 1px 1px",
+            borderBottomLeftRadius: "5px",
+            borderBottomRightRadius: "5px",
+          }}
+        >
+          {codeString}
+        </SyntaxHighlighter>
       </CodeBlockBG>
     </>
   );

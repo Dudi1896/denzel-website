@@ -24,5 +24,6 @@ export const theme ={
     HorzGrade: 'linear-gradient(to right, rgb(78, 26, 112) , rgb(43, 76, 242))',
     MixGrade: 'linear-gradient(to bottom right, rgb(78, 26, 112) , rgb(43, 76, 242))',
     WhitePad: 'linear-gradient(to bottom right, white , white)',
+    MainGradient: 'linear-gradient(to bottom right, rgb(65, 203, 191) , rgb(238, 130, 238))',
 }
 

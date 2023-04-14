@@ -62,7 +62,6 @@ max-width: 1250px;
 margin-right: auto;
 margin-left: auto;
 padding: 20 0px;
-/* border: dashed 14px darkcyan; */
 
 @media screen and (max-wdth: ${theme.mobile}) {
     padding-right: 30px;
@@ -81,3 +80,123 @@ export const HoverScale = styled.div`
     }
   }
 `;
+
+export const Row = styled.div`
+  &::after {
+  content: "";
+  display: table;
+  clear: both;
+}`;
+
+export const ColumnTwoThirds = styled.div`
+/* 2/3 column */
+  float: left;
+  width: 66.6%;
+  border: 2px solid transparent;
+
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+  width: 100%;
+  }
+`;
+
+export const ColumnOneThirds = styled.div`
+/* 1/3 column */
+  float: left;
+  width: 33.3%;
+  border: 2px solid transparent;
+
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+  width: 100%;
+  }
+`;
+
+export const MainTitle = styled.h1`
+  font-family: "Segoe UI";
+  color: ${({ theme }) => theme.PrimaryColor};
+  font-size: max(10vmin);
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+
+  @keyframes mainFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+export const MainText = styled.p`
+  animation: secFadeIn 2s forwards;
+  animation-delay: 3.2s;
+  opacity: 0%;
+  font-weight: 600;
+  font-family: "Segoe UI";
+  background: ${({ theme }) => theme.MainGradient};
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* color: transparent; */
+  font-size: max(4vmin);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+  @keyframes secFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  } 
+`;
+
+
+export const SvgWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0;
+  position: relative;
+`;
+
+export const SvgBGDesign = styled.div`
+  background-color: ${({ theme }) => theme.DarkColor};
+  padding: 7px 4px;
+  font-size: 14px;
+  margin: 1px 20px 0 1px;
+  border-top-left-radius: 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 67px; 
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-left: 14px solid ${({ theme }) => theme.DarkColor};
+    border-bottom: 16px solid transparent;
+
+    @media (max-width: ${({ theme }) => theme.tablet}) {
+    left: 66.8px; 
+  }
+
+  @media only screen and (min-width: ${theme.AirPad}) and (max-width: ${theme.tablet}) {
+    left: 66.4px; 
+  }
+  }
+`;
+
+export const SubHeader = styled.div`
+  padding: 7px 4px;
+  font-size: 14px;
+  font-weight: 600;
+  `;

@@ -1,27 +1,28 @@
 import React from "react";
-import { StyledWelcome } from "./Welcome.styled.js";
+import { StyledWelcome, WelcomeContainer } from "./Welcome.styled.js";
 import CodeBlock from "../CodeBlock/CodeBlock.js";
+import { Row, ColumnOneThirds, ColumnTwoThirds, MainTitle, MainText } from "../../global.js";
 
-const Welcome = ({ element }) => {
+const Welcome = ({theme}) => {
   return (
     <StyledWelcome>
-      <div ref={element}>
-        <div class="container">
-          <div class="box">
-            <div class="title">
-              <span class="block"></span>
-              <h1>
-                Denzel Udemba<span></span>
-              </h1>
-            </div>
-            <div class="role">
-              <div class="block"></div>
-              <p>Software Engineer</p>
-            </div>
-          </div>
-        </div>
-        <CodeBlock />
-      </div>
+      <WelcomeContainer>
+        <Row>
+          <ColumnTwoThirds>
+            <MainTitle>Denzel Udemba</MainTitle>
+            <MainText theme={theme}>Software Engineer</MainText>
+          </ColumnTwoThirds>
+        </Row>
+      </WelcomeContainer>
+
+      <WelcomeContainer>
+        <Row>
+          <ColumnOneThirds></ColumnOneThirds>
+          <ColumnTwoThirds>
+            <CodeBlock />
+          </ColumnTwoThirds>
+        </Row>
+      </WelcomeContainer>
     </StyledWelcome>
   );
 };
