@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CodeBlockBG = styled.div`
   margin-left: 18vw;
-  margin-top: 19px;
+  margin-top: 18px;
   position: relative;
   top: -20px;
   background-color: grey;
