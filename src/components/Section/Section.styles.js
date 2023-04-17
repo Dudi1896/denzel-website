@@ -4,7 +4,8 @@ import { theme } from "../../theme";
 export const InfoSec = styled.div`
   color: ${({ lightText }) => (lightText ? theme.LightPrimary : theme.primaryDark)};
   padding: 160px 0;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
+
   background: ${({ lightBg }) => (lightBg ? theme.LightPrimary : theme.primaryDark )};
 `;
 
@@ -13,7 +14,8 @@ export const InfoRow = styled.div`
   margin: 0px -15px -15px -15px;
   padding: 5px;
   flex-wrap: wrap;
-  
+  max-height: 450px;
+  overflow-y: none;
   align-items: center;
   border: 2px solid green;
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
@@ -52,10 +54,10 @@ export const ImgWrapper = styled.div`
   justify-content: ${({ start }) => (start ? 'flex-start': 'flex-end' )};
   padding-left: 75px;
 
-  background: url("https://avatars.githubusercontent.com/u/17666999?v=4") center;
+  /* background: url("https://avatars.githubusercontent.com/u/17666999?v=4") center; */
   font-size: 8px;
   line-height: 10px;
-  background-size: 1000px 1000px;
+  /* background-size: 1000px 1000px; */
 
 
   background-clip: text;
@@ -66,10 +68,10 @@ export const ImgWrapper = styled.div`
 export const Img = styled.img`
   padding-right: 0;
   border: 0;
-  max-width: 100%;
+  /* max-width: 100%; */
   vertical-align: middle;
   display: inline-block;
-  max-height: 600px;
+  /* max-height: 600px; */
 `;
 
 
@@ -80,11 +82,13 @@ export const TopLine = styled.div`
   letter-spacing: 1.4px;
   margin-bottom: 16px;
   padding:2px;
+  min-height: 30px;
   border: 2px solid purple;
 `;
 
 export const Heading = styled.h1`
     margin-bottom: 24px;
+    min-height: 180px;
     font-size: 48px;
     line-height: 1.1;
     border: 2px solid violet;

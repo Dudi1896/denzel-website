@@ -10,7 +10,7 @@ export const HomeObjOne = {
   'Our team of unique specialist can help you acheive your business goals',
   headline: 'Lead Generation Specialist for Online Businesses',
   lightText: false,
-  img: require('../../assets/images/denzel-logo.png'),
+  // img: require('../../assets/images/denzel-logo.png'),
   alt: 'Image',
   start: false,
   Port: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit amet" + 

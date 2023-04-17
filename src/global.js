@@ -144,7 +144,6 @@ export const MainText = styled.p`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  /* color: transparent; */
   font-size: max(4vmin);
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -171,20 +170,20 @@ export const SvgBGDesign = styled.div`
   background-color: ${({ theme }) => theme.DarkColor};
   padding: 7px 4px;
   font-size: 14px;
-  margin: 1px 20px 0 1px;
+  margin: 1px 1px -2px 1px;
   border-top-left-radius: 5px;
 
   &::after {
     content: "";
     position: absolute;
     top: 50%;
-    left: 67px;
-    transform: translateY(-50%);
+    left: 66.5px;
+    transform: translateY(-45%);
     width: 0;
     height: 0;
-    border-top: 16px solid transparent;
-    border-left: 14px solid ${({ theme }) => theme.DarkColor};
-    border-bottom: 16px solid transparent;
+    border-top: 17px solid transparent;
+    border-left: 12px solid ${({ theme }) => theme.DarkColor};
+    border-bottom: 17px solid transparent;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
       left: 66.7px;

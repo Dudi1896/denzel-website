@@ -1,4 +1,5 @@
 export const data = {
+
   header: [
     {
       name: "Denzel Udemba",
@@ -46,24 +47,24 @@ export const data = {
     {
       title1: "Facial Recognition Web App",
       points1: [
-        "● Implemented a web application using ReactJS as the front-end framework, and back-end with Express and PostgreSQL",
-        "● The app can recognize the faces of people, and when a user signs up, they can track their points",
+        "Implemented a web application using ReactJS as the front-end framework, and back-end with Express and PostgreSQL",
+        "The app can recognize the faces of people, and when a user signs up, they can track their points",
       ],
       title2: "Robotic Vision Systems",
       points2: [
-        "● Designed and tested autonomous depth perception rover to perform navigation in an agricultural setting",
-        "● Integrated, wired, and tested robotic chassis with Jetson TX1 (Graphics Processing Unit) using Ubuntu environment",
-        "● Implemented Python code into Autopilot and tested code with ultrasonic Sensor to perform autonomous navigation",
+        "Designed and tested autonomous depth perception rover to perform navigation in an agricultural setting",
+        "Integrated, wired, and tested robotic chassis with Jetson TX1 (Graphics Processing Unit) using Ubuntu environment",
+        "Implemented Python code into Autopilot and tested code with ultrasonic Sensor to perform autonomous navigation",
       ],
       title3: "Phonebook Database",
       points3: [
-        "● Wrote a phonebook application using Python that allows users the ability to perform CRUD operations",
-        "● Stored phonebook records in an SQLite Database using SQL commands",
+        "Wrote a phonebook application using Python that allows users the ability to perform CRUD operations",
+        "Stored phonebook records in an SQLite Database using SQL commands",
       ],
       title4: "TicTacToe Game",
       points4: [
-        "● Designed and wrote a Tic Tac Toe game with regular game functions for two users using two-dimensional arrays",
-        "● Implemented use case scenarios for error handling, player turns and draw checks",
+        "Designed and wrote a Tic Tac Toe game with regular game functions for two users using two-dimensional arrays",
+        "Implemented use case scenarios for error handling, player turns and draw checks",
       ],
     },
   ],

@@ -20,7 +20,8 @@ const Home = () => {
           <Welcome />
           <About />
           <Section {...HomeObjOne}/>
-          {/* <About /> */}
+          <About />
+          <Section />
           <Footer />
         {/* </div> */}
       </ThemeProvider>

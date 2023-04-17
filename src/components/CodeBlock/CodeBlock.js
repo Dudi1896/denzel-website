@@ -30,7 +30,7 @@ ${dateTimeString} [200] payment_intent.succeeded
 const CodeBlock = () => {
   const [copy, setCopy] = useState(false);
 
-  const textState = ["istyping", "isdeleting"];
+  const textState = ["istyping"];
   const [typing1, setTyping1] = useState(textState[0]);
   const [text1, setText1] = useState("");
 
@@ -47,16 +47,7 @@ const CodeBlock = () => {
           setTyping1(textState[1]);
         });
       } 
-      // else if (
-      //   (text1 === first_text && typing1 === "isdeleting") ||
-      //   typing1 === "isdeleting"
-      // ) {
-      //   setText1(first_text.slice(0, text1.length - 1));
-      //   if (text1.length <= 2) {
-      //     setTyping1(textState[0]);
-      //   }
-      // }
-    }, 20);
+    }, 15);
 
     return () => clearTimeout(timeout);
   }, [text1, typing1]);
@@ -93,7 +84,6 @@ const CodeBlock = () => {
           language="bash"
           style={atomOneDarkReasonable}
           wrapLongLines={true}
-          showInlineLineNumbers={true}
           customStyle={{
             padding: "25px 0px 15px 15px",
             margin: "0px 1px 1px 1px",
