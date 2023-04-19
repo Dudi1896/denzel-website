@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Page,
+  Font,
   Text,
   View,
   Document,
@@ -11,6 +12,27 @@ import {
 } from "@react-pdf/renderer";
 import { data } from "./data";
 import logo from "../../assets/images/new-logo-d.png";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import bullet from "../../assets/images/sqr-icon.png";
+
+Font.register({
+  family: "Roboto",
+  fonts: [
+    { src: "https://fonts.cdnfonts.com/css/roboto" }, // font-style: normal, font-weight: normal
+    { src: "https://fonts.cdnfonts.com/css/roboto", fontStyle: "italic" },
+    {
+      src: "https://fonts.cdnfonts.com/css/roboto",
+      fontStyle: "italic",
+      fontWeight: 700,
+    },
+  ],
+});
+
+Font.registerEmojiSource({
+  format: "png",
+  url: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/",
+});
 
 const styles = StyleSheet.create({
   group: {
@@ -50,7 +72,6 @@ const styles = StyleSheet.create({
     paddingLeft: "3vw",
   },
   header: {
-    // marginVertical: ".5vh",
     border: "2px solid green",
     fontSize: "100px",
     minHeight: "6vh",
@@ -60,8 +81,10 @@ const styles = StyleSheet.create({
     flex: 1,
     border: "2px solid red",
     fontSize: "25px",
-    minHeight: "2vh",
+    minHeight: "3vh",
     marginTop: "1vh",
+    width: "45vw",
+
   },
   section: {
     paddingLeft: "10px",
@@ -70,13 +93,26 @@ const styles = StyleSheet.create({
     fontSize: "25px",
     marginTop: ".125vw",
     marginBottom: "2vw",
-    width:"45vw",
+    minwidth: "45vw",
   },
   logo: {
     border: "2px solid orange",
     index: "30",
     marginTop: "2vh",
     marginBottom: "0.5vh",
+  },
+  bullet: {
+    width: ".5px",
+    height: ".5px",
+    fontSize: ".65vw",
+    marginRight: "5px",
+    transformOriginY: "-75%",
+  },
+  span:{
+    display: "grid",
+    border: "2px solid red",
+    alignContent: "space-evenly;",
+    flexDirection: "row",
   },
   box: {
     width: "16vw",
@@ -120,14 +156,24 @@ const Resume = () => (
             <Text>Core Technologies:</Text>
             <View style={styles.box}>
               {data.technologies.map((techs, index) => (
-                <Text key={index}>■ {techs}</Text>
+                <Text key={index}>
+                  <View style={styles.bullet}>
+                    <Image src={bullet}></Image>
+                  </View>
+                  &nbsp; {techs}
+                </Text>
               ))}
             </View>
 
             <Text>Other Skills:</Text>
             <View style={styles.box}>
               {data.otherProficiencies.map((prof, index) => (
-                <Text key={index}>■ {prof}</Text>
+                <Text key={index}>
+                  <View style={styles.bullet}>
+                    <Image src={bullet}></Image>
+                  </View>
+                  &nbsp; {prof}
+                </Text>
               ))}
             </View>
           </View>
@@ -142,9 +188,9 @@ const Resume = () => (
               ))}
 
               {data.summary.map((summary, index) => (
-                <view style={styles.summary} key={index}>
+                <View style={styles.summary} key={index}>
                   <Text key={index}>{summary}</Text>
-                </view>
+                </View>
               ))}
             </View>
 
@@ -156,7 +202,13 @@ const Resume = () => (
                 <Text>{company.role}</Text>
                 <Text>{company.period}</Text>
                 {company.points.map((point, index) => (
-                  <Text key={index}>■ {point}</Text>
+                  <Text key={index}>
+                    <View style={styles.bullet}>
+                      <Image src={bullet}></Image>
+                    </View>
+                    &nbsp;
+                    {point}
+                  </Text>
                 ))}
               </View>
             ))}
@@ -166,7 +218,13 @@ const Resume = () => (
               <View style={styles.section} key={index}>
                 <Text>{proj.title1}</Text>
                 {proj.points1.map((point1, index) => (
-                  <Text key={index}>■ {point1}</Text>
+                  <Text key={index}>
+                    <View style={styles.bullet}>
+                      <Image src={bullet}></Image>
+                    </View>
+                    &nbsp;
+                    {point1}
+                  </Text>
                 ))}
               </View>
             ))}
@@ -175,7 +233,13 @@ const Resume = () => (
               <View style={styles.section} key={index}>
                 <Text>{proj.title2}</Text>
                 {proj.points2.map((point2, index) => (
-                  <Text key={index}>■ {point2}</Text>
+                  <Text key={index}>
+                    <View style={styles.bullet}>
+                      <Image src={bullet}></Image>
+                    </View>
+                    &nbsp;
+                    {point2}
+                  </Text>
                 ))}
               </View>
             ))}
@@ -184,7 +248,13 @@ const Resume = () => (
               <View style={styles.section} key={index}>
                 <Text>{proj.title3}</Text>
                 {proj.points3.map((point3, index) => (
-                  <Text key={index}>■ {point3}</Text>
+                  <Text key={index}>
+                    <View style={styles.bullet}>
+                      <Image src={bullet}></Image>
+                    </View>
+                    &nbsp;
+                    {point3}
+                  </Text>
                 ))}
               </View>
             ))}
@@ -193,7 +263,13 @@ const Resume = () => (
               <View style={styles.section} key={index}>
                 <Text>{proj.title4}</Text>
                 {proj.points4.map((point4, index) => (
-                  <Text key={index}>◼ {point4}</Text>
+                  <Text key={index}>
+                    <View style={styles.bullet}>
+                      <Image src={bullet}></Image>
+                    </View>
+                    &nbsp;
+                    {point4}
+                  </Text>
                 ))}
               </View>
             ))}
@@ -201,10 +277,12 @@ const Resume = () => (
             <Text>Education</Text>
             {data.education.map((education, index) => (
               <View style={styles.section} key={index}>
+              <View style={styles.span}>
                 <Text>{education.major1}</Text>
-                <Text>{education.grade1}</Text>
-                <Text>{education.school1}</Text>
-                <Text>{education.date1}</Text>
+                <Text>&nbsp;{education.grade1}</Text>
+                <Text>&nbsp;{education.school1}</Text>
+                <Text>&nbsp;{education.date1}</Text>
+              </View>
 
                 <Text>{education.major2}</Text>
                 <Text>{education.grade2}</Text>

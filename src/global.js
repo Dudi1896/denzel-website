@@ -25,8 +25,9 @@ export const GlobalStyles = createGlobalStyle`
         @media (max-width: ${({ theme }) => theme.mobile}) {
             min-height: 500px;
         }
-    }
-      `;
+
+        }
+        `;
 
 export const Button = styled.button`
   border-radius: 4px;
