@@ -64,13 +64,13 @@ const styles = StyleSheet.create({
     marginTop: "1vh",
   },
   section: {
-    marginVertical: "2vh",
     paddingLeft: "10px",
     paddingRight: "10px",
     border: "2px solid green",
     fontSize: "25px",
     marginTop: ".125vw",
     marginBottom: "2vw",
+    width:"45vw",
   },
   logo: {
     border: "2px solid orange",
@@ -120,14 +120,14 @@ const Resume = () => (
             <Text>Core Technologies:</Text>
             <View style={styles.box}>
               {data.technologies.map((techs, index) => (
-                <Text key={index}>• {techs}</Text>
+                <Text key={index}>■ {techs}</Text>
               ))}
             </View>
 
             <Text>Other Skills:</Text>
             <View style={styles.box}>
               {data.otherProficiencies.map((prof, index) => (
-                <Text key={index}>• {prof}</Text>
+                <Text key={index}>■ {prof}</Text>
               ))}
             </View>
           </View>
@@ -156,7 +156,7 @@ const Resume = () => (
                 <Text>{company.role}</Text>
                 <Text>{company.period}</Text>
                 {company.points.map((point, index) => (
-                  <Text key={index}>• {point}</Text>
+                  <Text key={index}>■ {point}</Text>
                 ))}
               </View>
             ))}
@@ -166,7 +166,7 @@ const Resume = () => (
               <View style={styles.section} key={index}>
                 <Text>{proj.title1}</Text>
                 {proj.points1.map((point1, index) => (
-                  <Text key={index}>• {point1}</Text>
+                  <Text key={index}>■ {point1}</Text>
                 ))}
               </View>
             ))}
@@ -175,7 +175,7 @@ const Resume = () => (
               <View style={styles.section} key={index}>
                 <Text>{proj.title2}</Text>
                 {proj.points2.map((point2, index) => (
-                  <Text key={index}>• {point2}</Text>
+                  <Text key={index}>■ {point2}</Text>
                 ))}
               </View>
             ))}
@@ -184,7 +184,7 @@ const Resume = () => (
               <View style={styles.section} key={index}>
                 <Text>{proj.title3}</Text>
                 {proj.points3.map((point3, index) => (
-                  <Text key={index}>• {point3}</Text>
+                  <Text key={index}>■ {point3}</Text>
                 ))}
               </View>
             ))}
@@ -193,7 +193,7 @@ const Resume = () => (
               <View style={styles.section} key={index}>
                 <Text>{proj.title4}</Text>
                 {proj.points4.map((point4, index) => (
-                  <Text key={index}>• {point4}</Text>
+                  <Text key={index}>◼ {point4}</Text>
                 ))}
               </View>
             ))}
