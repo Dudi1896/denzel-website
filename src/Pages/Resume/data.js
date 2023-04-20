@@ -28,11 +28,9 @@ export const data = {
 
   companies: [
     {
-      title: "Work Experience",
-      name: "LTN Global",
+      name: "LTN Global - DevOps Engineer",
       period: "June 2019 - Feb 2022",
       role: "DevOps Engineer",
-      intro: "Work Experience",
       points: [
         "Designed System Architecture to facilitate SCTE104,35 & 224 Profiles for high-level broadcast companies including" +
           "but not limited to Fox, AMC, Sinclair Broadcast, Singtel, Encompass Digital Media, Sling, Comcast & Werner Media",
@@ -75,9 +73,10 @@ export const data = {
       major2: "Major: B.S.E Electrical Engineering",
       school1: "Chattahoochee Technical College",
       school2: "Mercer University",
-      date1: "June 2022 - May 2024",
+      date1: "Jun 2022 - May 2024",
       date2: "Jan 2015 - Dec 2018",
       grade1: "GPA: 4.0",
+      grade2: "GPA: 3.3",
     },
   ],
 
