@@ -1,4 +1,3 @@
-export { default as About } from "./About/About";
 export { default as Burger } from "./Burger/Burger";
 export { default as Cards  } from "./Cards/Cards";
 export { default as Header } from "./Header/Header";

@@ -5,7 +5,6 @@ import { theme } from "../../theme.js";
 import { Footer, Section, Welcome } from "../../components";
 import Header from "../../components/Header/Header";
 import useScrollSnap from "react-use-scroll-snap";
-import About from "../../components/About/About";
 import { HomeObjOne } from "../../components/Cards/data.js";
 
 const Home = () => {
@@ -18,9 +17,7 @@ const Home = () => {
           <GlobalStyles />
           <Header />
           <Welcome />
-          <About />
           <Section {...HomeObjOne}/>
-          <About />
           <Section />
           <Footer />
         {/* </div> */}

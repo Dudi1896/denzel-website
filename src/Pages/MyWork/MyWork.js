@@ -5,9 +5,7 @@ import { theme } from "../../theme";
 import Header from "../../components/Header/Header";
 import { Cards, Footer, Welcome } from "../../components";
 import { Section } from "../../components"
-import About from "../../components/About/About";
 import { WorkObjOne } from "./Data";
-import { Tester } from "../../components/About/Data";
 import { HomeObjOne, data } from "../../components/Cards/data";
 
 const MyWork = () => {
@@ -16,8 +14,7 @@ const MyWork = () => {
       <ThemeProvider theme={theme}>
           <GlobalStyles />
           <Header />
-          {/* <Section {...WorkObjOne}/> */}
-          <About {...Tester} />
+          <Section {...WorkObjOne}/>
           <Cards data={data} {...HomeObjOne}/>
           <Footer />
       </ThemeProvider>
