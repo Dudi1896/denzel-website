@@ -56,7 +56,7 @@ const Menu = ({ open, ...props }) => {
         </MenuItems>
       </NavLink>
 
-      <NavLink to="/Resume" target="_blank" rel="noopener noreferrer">
+      <NavLink to="/Resume">
         <MenuItems tabIndex={tabIndex}>
           <span role="img" aria-label="Resume" aria-hidden="true">
             <FontAwesomeIcon icon={faPaperclip} />
