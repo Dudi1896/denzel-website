@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
-
+import GeoBg  from "../../assets/images/geometric.jpg";
+ 
 export const InfoSec = styled.div`
   color: ${({ lightText }) => (lightText ? theme.LightPrimary : theme.primaryDark)};
   padding: 160px 0;
   border: 2px solid blue;
-
+  background-size: cover;
+  background-image: url(${GeoBg});
   background: ${({ lightBg }) => (lightBg ? theme.LightPrimary : theme.primaryDark )};
 `;
 

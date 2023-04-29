@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, HoverScale } from "../../global";
+import { NavLink } from "react-router-dom";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import Logo from "../../assets/images/logo-d.png";
 import {
   FooterContainer,
   FooterSubscription,
@@ -25,57 +27,73 @@ import {
 const Footer = ({ lightBg, lightText, theme }) => {
   return (
     <FooterContainer lightBg={lightBg}>
-      <FooterSubscription lightText={lightText}>
-        <FooterSubHeading>Send Me A Message</FooterSubHeading>
-        <FooterSubText>You can unsubscribe at any time</FooterSubText>
-        <Form theme={theme}>
-          <FormInput
-            theme={theme}
-            name="email"
-            type="email"
-            placeholder="Your Email"
-          />
-          <Button fontBig>Send</Button>
-        </Form>
-      </FooterSubscription>
       <FooterLinksContainer theme={theme}>
         <FooterLinksWrapper theme={theme}>
           <FooterLinksItems theme={theme}>
             <FooterLinkTitle>SAY HELLO</FooterLinkTitle>
-            <FooterLink to="sign-up">denzelu181@gmail.com</FooterLink>
+            <FooterLink
+              href="mailto:denzelu181@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              denzelu181@gmail.com
+            </FooterLink>
           </FooterLinksItems>
           <FooterLinksItems theme={theme}></FooterLinksItems>
         </FooterLinksWrapper>
         <FooterLinksWrapper theme={theme}>
           <FooterLinksItems theme={theme}>
-            <FooterLinkTitle></FooterLinkTitle>
-            <FooterLink to="sign-up">My Work</FooterLink>
-            <FooterLink to="/">Blog</FooterLink>
-            <FooterLink to="/">Resume</FooterLink>
+            <NavLink to="/">
+              <FooterLink>Home</FooterLink>
+            </NavLink>
+
+            <NavLink to="/MyWork">
+              <FooterLink>My Work</FooterLink>
+            </NavLink>
+
+            <NavLink to="/Blogs">
+              <FooterLink>Blog</FooterLink>
+            </NavLink>
+
+            <NavLink to="/Resume" target="_blank" rel="noreferrer">
+              <FooterLink>Resume</FooterLink>
+            </NavLink>
           </FooterLinksItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap theme={theme}>
           <SocialLogo to="/">
-            <SocialIcon />
+        <img src={Logo} alt="logo" />
           </SocialLogo>
           <WebsiteRights>Denzel Udemba @ 2023</WebsiteRights>
           <SocialIcons>
             <HoverScale>
-              <SocialIconLink href="/" target="_blank" aria-label="Twitter">
+              <SocialIconLink
+                href="https://twitter.com/denzence"
+                target="_blank"
+                aria-label="Twitter"
+              >
                 <FaTwitter />
               </SocialIconLink>
             </HoverScale>
 
             <HoverScale>
-              <SocialIconLink href="/" target="_blank" aria-label="Linkedin">
+              <SocialIconLink
+                href="https://www.linkedin.com/in/denzel-udemba-3500505b/"
+                target="_blank"
+                aria-label="Linkedin"
+              >
                 <FaLinkedin />
               </SocialIconLink>
             </HoverScale>
 
             <HoverScale>
-              <SocialIconLink href="/" target="_blank" aria-label="Github">
+              <SocialIconLink
+                href="https://github.com/Dudi1896"
+                target="_blank"
+                aria-label="Github"
+              >
                 <FaGithub />
               </SocialIconLink>
             </HoverScale>

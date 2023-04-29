@@ -4,7 +4,8 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../../global.js";
 import { theme } from "../../theme.js";
 import Header from "../../components/Header/Header";
-import { Footer } from "../../components/index.js";
+import { Footer, Section } from "../../components/index.js";
+import { HomeObjOne } from "../../components/Cards/data.js";
 
 const Blogs = () => {
 
@@ -13,6 +14,7 @@ const Blogs = () => {
         <ThemeProvider theme={theme}>
           <GlobalStyles />
           <Header />
+          <Section {...HomeObjOne}/>
           <Footer />
         </ThemeProvider>
       </div>

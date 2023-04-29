@@ -14,7 +14,6 @@ export const CardGridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 40px;
-  border: 2px dashed red;
   max-width: 1450px;
   margin-right: auto;
   margin-left: auto;

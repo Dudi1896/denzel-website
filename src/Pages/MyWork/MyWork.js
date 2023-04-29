@@ -14,7 +14,6 @@ const MyWork = () => {
       <ThemeProvider theme={theme}>
           <GlobalStyles />
           <Header />
-          <Section {...WorkObjOne}/>
           <Cards data={data} {...HomeObjOne}/>
           <Footer />
       </ThemeProvider>

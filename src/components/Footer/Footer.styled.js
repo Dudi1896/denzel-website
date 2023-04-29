@@ -5,7 +5,7 @@ import { FaMagento } from "react-icons/fa";
 
 export const FooterContainer = styled.div`
   background: ${theme.primaryDark};
-  padding: 4rem 0 2rem 0;
+  padding: 1rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,7 +95,7 @@ export const FooterLinksItems = styled.div`
   align-items: flex-start;
   margin: 16px;
   text-align: left;
-  width: 190px;
+  width: 250px;
   color: #fff;
 
   @media screen and (max-width: ${theme.mobile}) {
@@ -106,10 +106,10 @@ export const FooterLinksItems = styled.div`
 `;
 
 export const FooterLinkTitle = styled.h2`
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 `;
 
-export const FooterLink = styled(Link)`
+export const FooterLink = styled.a`
   color: #fff;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -145,11 +145,12 @@ cursor: pointer;
 text-decoration: none;
 font-size: 2rem;
 display: flex;
+width: 8rem;
 align-items: center;
 margin-bottom: 16px;
 `;
 
-export const SocialIcon = styled(FaMagento)`
+export const SocialIcon = styled(Link)`
   margin-right: 16px;
 `;
 

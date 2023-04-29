@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../../global.js";
 import { theme } from "../../theme.js";
-import { Footer, Section, Welcome } from "../../components";
+import { ContactMe, Footer, Section, Welcome } from "../../components";
 import Header from "../../components/Header/Header";
 import useScrollSnap from "react-use-scroll-snap";
 import { HomeObjOne } from "../../components/Cards/data.js";
@@ -19,6 +19,7 @@ const Home = () => {
           <Welcome />
           <Section {...HomeObjOne}/>
           <Section />
+          <ContactMe />
           <Footer />
         {/* </div> */}
       </ThemeProvider>
