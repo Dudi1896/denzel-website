@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { useOnClickOutside } from "../../Hooks/hooks.js";
 import { GlobalStyles } from "../../global.js";
 import { theme } from "../../theme.js";
-import { Burger, Menu, Navbar } from "..";
+import { Menu, Navbar } from "..";
 import FocusLock from "react-focus-lock";
 
 const Header = () => {

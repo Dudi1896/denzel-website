@@ -20,10 +20,10 @@ const Cards = ({ lightBg }) => {
               </HoverScale>
               <h2>{item.title}</h2>
               <p>{item.description}</p>
-              <a href={item.link} target="_blank" rel="nonreferrer">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href={item.visit} target="_blank" rel="nonreferrer" >
+              <a href={item.visit} target="_blank" rel="noopener noreferrer" >
               {item.display && <Button>Visit</Button>}
               </a>
             </Card>

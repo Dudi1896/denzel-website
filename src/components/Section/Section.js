@@ -11,10 +11,8 @@ import {
   TopLine,
   Heading,
   Subtitle,
-  Portrait,
 } from "./Section.styles";
 
-import { data, Port } from "../Cards/data";
 
 const Section = ({
   primary,

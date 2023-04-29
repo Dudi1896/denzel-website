@@ -1,15 +1,10 @@
 import React from "react";
-import { Button, HoverScale } from "../../global";
+import { HoverScale } from "../../global";
 import { NavLink } from "react-router-dom";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import Logo from "../../assets/images/logo-d.png";
 import {
   FooterContainer,
-  FooterSubscription,
-  FooterSubHeading,
-  FooterSubText,
-  Form,
-  FormInput,
   FooterLinksContainer,
   FooterLinksWrapper,
   FooterLinksItems,
@@ -21,7 +16,6 @@ import {
   WebsiteRights,
   SocialIcons,
   SocialIconLink,
-  SocialIcon,
 } from "./Footer.styled";
 
 const Footer = ({ lightBg, lightText, theme }) => {

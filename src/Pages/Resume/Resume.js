@@ -8,14 +8,11 @@ import {
   PDFViewer,
   Image,
   Link,
-  PDFDownloadLink,
 } from "@react-pdf/renderer";
 import { data } from "./data";
 import logo from "../../assets/images/logo-d.png";
 import bullet from "../../assets/images/sqr-icon.png";
 import linkedIn from "../../assets/images/logo-linkedin.png";
-import dlIcon from "../../assets/images/download.png";
-import DenzelPDF from "./DenzelUdemba.pdf";
 
 const styles = StyleSheet.create({
   group: {
@@ -175,21 +172,7 @@ const styles = StyleSheet.create({
   },
 });
 
-// Function will execute on click of button
-const OnButtonClick = () => {
-  // using Java Script method to get PDF file
-  fetch(DenzelPDF).then((response) => {
-    response.blob().then((blob) => {
-      // Creating new object of PDF file
-      const fileURL = window.URL.createObjectURL(blob);
-      // Setting various property values
-      let alink = document.createElement("a");
-      alink.href = fileURL;
-      alink.download = DenzelPDF;
-      alink.click();
-    });
-  });
-};
+
 
 const Resume = () => (
   <>

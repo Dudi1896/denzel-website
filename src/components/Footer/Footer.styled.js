@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
 import { Link } from "react-router-dom";
-import { FaMagento } from "react-icons/fa";
 
 export const FooterContainer = styled.div`
   background: ${theme.primaryDark};

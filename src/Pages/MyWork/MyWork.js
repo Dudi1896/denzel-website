@@ -3,9 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../../global";
 import { theme } from "../../theme";
 import Header from "../../components/Header/Header";
-import { Cards, Footer, Welcome } from "../../components";
-import { Section } from "../../components"
-import { WorkObjOne } from "./Data";
+import { Cards, Footer } from "../../components";
 import { HomeObjOne, data } from "../../components/Cards/data";
 
 const MyWork = () => {
