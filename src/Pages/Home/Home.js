@@ -8,12 +8,12 @@ import useScrollSnap from "react-use-scroll-snap";
 import { HomeObjOne } from "../../components/Cards/data.js";
 
 const Home = () => {
-  // const scrollRef = useRef(null);
-  // useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
   return (
     <div>
       <ThemeProvider theme={theme}>
-        {/* <div ref={scrollRef}> */}
+        <div ref={scrollRef}>
           <GlobalStyles />
           <Header />
           <Welcome />
@@ -21,7 +21,7 @@ const Home = () => {
           <Section />
           <ContactMe />
           <Footer />
-        {/* </div> */}
+        </div>
       </ThemeProvider>
     </div>
   );
