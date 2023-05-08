@@ -14,7 +14,23 @@ import logo from "../../assets/images/logo-d.png";
 import bullet from "../../assets/images/sqr-icon.png";
 import linkedIn from "../../assets/images/logo-linkedin.png";
 
+
+
 const styles = StyleSheet.create({
+  '@media screen and (min-width: 768px)': {
+    '#Resume': {
+      '@page': {
+        size: 'A7',
+      },
+    },
+  },
+  '@media screen and (min-width: 1200px)': {
+    '#Resume': {
+      '@page': {
+        size: 'A3',
+      },
+    },
+  },
   group: {
     flexDirection: "column",
     // border: "2px dashed yellowgreen",
@@ -180,7 +196,7 @@ const Resume = () => (
       <Document>
         <Page size="A1" style={styles.page}>
           <View style={styles.leftColumn}>
-            <Link src="http://localhost:3000">
+            <Link src="https://denzeludemba.netlify.app">
               <View style={styles.logo}>
                 <Image src={logo}></Image>
               </View>
@@ -221,15 +237,6 @@ const Resume = () => (
 
           <View style={styles.rightColumn}>
             <View style={styles.iconTops}>
-              {/* <PDFDownloadLink>
-                <View style={styles.downloadImage}>
-                  <Text>Download</Text>
-                  <View style={styles.iconImage}>
-                    <Image src={dlIcon}></Image>
-                  </View>
-                </View>
-              </PDFDownloadLink> */}
-
               <Link
                 src="https://www.linkedin.com/in/denzel-udemba-3500505b/"
                 target="_blank"
@@ -404,7 +411,6 @@ const Resume = () => (
       </Document>
     </PDFViewer>
   </>
-  // );
 );
 
 export default Resume;
